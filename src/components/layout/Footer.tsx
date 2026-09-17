@@ -4,6 +4,7 @@ const LEGAL_LINKS = [
   { href: "/privacidad", label: "Privacidad" },
   { href: "/accesibilidad", label: "Accesibilidad" },
   { href: "/transparencia", label: "Transparencia" },
+  { href: "/reportar-error", label: "Reportar un error" },
 ];
 
 /**
