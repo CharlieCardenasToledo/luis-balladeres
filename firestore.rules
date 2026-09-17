@@ -1,0 +1,131 @@
+rules_version = '2';
+
+// Reglas de seguridad de Firestore.
+// Ver plan_web_luis_balladares_ux_ui_firebase.md, secciones 19-21 y 40.
+//
+// Principio: el sitio público solo LEE contenido ya publicado. Toda
+// escritura pasa por el Admin SDK en servidor (Next.js API routes /
+// Cloud Functions), que se autentica con la cuenta de servicio y por
+// tanto omite estas reglas. El panel /admin (aún no implementado) usará
+// Firebase Auth con custom claims `role` (SUPER_ADMIN | EDITOR | REVIEWER).
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function role() {
+      return request.auth.token.role;
+    }
+
+    function isSuperAdmin() {
+      return isSignedIn() && role() == "SUPER_ADMIN";
+    }
+
+    function isEditor() {
+      return isSignedIn() && (role() == "SUPER_ADMIN" || role() == "EDITOR");
+    }
+
+    function isReviewer() {
+      return isSignedIn()
+        && (role() == "SUPER_ADMIN" || role() == "EDITOR" || role() == "REVIEWER");
+    }
+
+    // --- Configuración pública del sitio ---
+    match /siteSettings/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // --- Contenido editorial: público solo si status == "published" ---
+    match /pages/{docId} {
+      allow read: if resource.data.status == "published" || isReviewer();
+      allow write: if false;
+    }
+
+    match /proposals/{docId} {
+      allow read: if resource.data.status == "published" || isReviewer();
+      allow write: if false;
+    }
+
+    match /news/{docId} {
+      allow read: if resource.data.status == "published" || isReviewer();
+      allow write: if false;
+    }
+
+    match /events/{docId} {
+      allow read: if resource.data.status == "published" || isReviewer();
+      allow write: if false;
+    }
+
+    match /documents/{docId} {
+      allow read: if resource.data.status == "published" || isReviewer();
+      allow write: if false;
+    }
+
+    // --- Contenido informativo sin workflow editorial propio ---
+    match /timeline/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /territories/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /media/{docId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // --- Feed social: público solo lo activo, todo lo demás requiere revisor ---
+    match /socialPosts/{docId} {
+      allow read: if resource.data.status == "active" || isReviewer();
+      allow write: if false;
+    }
+
+    // --- Datos sensibles: nunca legibles desde el cliente ---
+    match /socialAccounts/{docId} {
+      allow read, write: if false;
+    }
+
+    match /syncJobs/{docId} {
+      allow read: if isEditor();
+      allow write: if false;
+    }
+
+    match /auditLogs/{docId} {
+      allow read: if isSuperAdmin();
+      allow write: if false;
+    }
+
+    match /users/{docId} {
+      allow read: if isSignedIn() && (request.auth.uid == docId || isSuperAdmin());
+      allow write: if false;
+    }
+
+    // --- Formularios ---
+    match /forms/{docId} {
+      allow read: if isEditor();
+      allow write: if false;
+    }
+
+    // El formulario público solo permite crear, nunca leer/editar/borrar
+    // desde el cliente (evita exponer datos personales de otros visitantes).
+    match /formSubmissions/{docId} {
+      allow create: if request.resource.data.keys().hasAll(["sourceForm", "consentAt", "consentVersion", "message"])
+        && request.resource.data.message is string
+        && request.resource.data.message.size() > 0
+        && request.resource.data.message.size() <= 5000;
+      allow read, update, delete: if false;
+    }
+
+    // Cualquier colección no listada explícitamente: denegado por defecto
+    // (defensa en profundidad; Firestore ya deniega por defecto).
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

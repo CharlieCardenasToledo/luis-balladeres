@@ -33,3 +33,29 @@ export type Event = {
   image?: string;
   status: "draft" | "published" | "cancelled";
 };
+
+/**
+ * Sección 22 — Documento único `siteSettings/main`.
+ * Sección 23 — `mode` controla banners/formularios/módulos durante
+ * el calendario electoral (nunca elimina contenido automáticamente).
+ */
+export type SiteSettings = {
+  siteName: string;
+  slogan: string;
+  electionLabel: string;
+  social: {
+    facebook?: string;
+    instagram?: string;
+    tiktok?: string;
+  };
+  contact: {
+    email?: string;
+    whatsapp?: string;
+  };
+  mode: "normal" | "maintenance" | "legal-review" | "silence-period";
+  hero: {
+    image?: string;
+    headline: string;
+    subheadline: string;
+  };
+};

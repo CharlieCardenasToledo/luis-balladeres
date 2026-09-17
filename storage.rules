@@ -1,0 +1,29 @@
+rules_version = '2';
+
+// Reglas de seguridad de Cloud Storage.
+// Ver plan_web_luis_balladares_ux_ui_firebase.md, sección 31.
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // Derivados optimizados (WebP/AVIF en varios anchos): públicos.
+    match /media/optimized/{allPaths=**} {
+      allow read: if true;
+      allow write: if false; // solo Admin SDK / pipeline de optimización
+    }
+
+    // Originales de campaña: nunca públicos, solo backend.
+    match /media/originals/{allPaths=**} {
+      allow read, write: if false;
+    }
+
+    // Documentos de transparencia (Plan de Trabajo, CV, comunicados): públicos.
+    match /documents/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

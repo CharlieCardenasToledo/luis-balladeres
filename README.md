@@ -53,6 +53,14 @@ npm run build
 - `robots.ts` y `sitemap.ts` básicos (excluyen `/admin` y `/api`).
 - `.env.example` con todas las variables necesarias (Firebase client/admin y
   placeholders comentados de redes sociales).
+- `firestore.rules` y `storage.rules`: reglas de seguridad por defecto
+  (secciones 19-21, 40 del plan). El sitio público solo lee contenido con
+  `status == "published"`/`"active"`; toda escritura queda reservada al
+  Admin SDK server-side. Preparadas para custom claims de rol
+  (`SUPER_ADMIN`/`EDITOR`/`REVIEWER`) cuando exista Firebase Auth admin.
+- `firebase.json`, `firestore.indexes.json`, `.firebaserc`: configuración
+  base del proyecto Firebase (`luis-balladeres`).
+- Tipo `SiteSettings` (`src/types/content.ts`), sección 22 del plan.
 
 ## Qué falta configurar
 
@@ -68,13 +76,16 @@ npm run build
    integradas. Falta: cuentas/apps de desarrollador, tokens en Secret
    Manager, Cloud Functions/Cloud Run de sincronización, Cloud Scheduler,
    normalización real y dashboard de estado (secciones 12-18, 41-44).
-4. **Admin/CMS**: `/admin` no existe todavía. Falta Firebase Auth, roles
-   (SUPER_ADMIN/EDITOR/REVIEWER), workflow editorial y Firestore Security
-   Rules (secciones 19-21, 40).
-5. **Colecciones Firestore**: crear el esquema descrito en la sección 21
-   (`siteSettings`, `pages`, `proposals`, `timeline`, `territories`, `news`,
-   `events`, `socialPosts`, `socialAccounts`, `documents`, `media`, `forms`,
-   `formSubmissions`, `users`, `auditLogs`, `syncJobs`).
+4. **Admin/CMS**: `/admin` no existe todavía. Falta Firebase Auth y el
+   workflow editorial; las Firestore/Storage Security Rules ya están
+   escritas (ver arriba) pero deben desplegarse (`firebase deploy --only
+   firestore:rules,storage`) y probarse contra el proyecto real.
+5. **Colecciones Firestore**: las reglas de seguridad ya cubren el esquema
+   de la sección 21 (`siteSettings`, `pages`, `proposals`, `timeline`,
+   `territories`, `news`, `events`, `socialPosts`, `socialAccounts`,
+   `documents`, `media`, `forms`, `formSubmissions`, `users`, `auditLogs`,
+   `syncJobs`), pero las colecciones aún no existen en Firestore ni tienen
+   datos semilla.
 6. **Formularios**: `/contacto` y `/reportar-error` son placeholders sin
    lógica de envío, validación (Zod) ni consentimiento real todavía.
 

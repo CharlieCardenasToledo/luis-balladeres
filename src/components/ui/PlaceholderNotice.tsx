@@ -7,8 +7,8 @@
  */
 export function PlaceholderNotice({ label = "Contenido pendiente" }: { label?: string }) {
   return (
-    <p className="inline-block rounded-sm border border-dashed border-gray-300 bg-gray-100 px-3 py-1 text-sm text-gray-600">
+    <span className="inline-block rounded-sm border border-dashed border-gray-300 bg-gray-100 px-3 py-1 text-sm text-gray-600">
       [{label}]
-    </p>
+    </span>
   );
 }
