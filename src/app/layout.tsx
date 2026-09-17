@@ -18,13 +18,13 @@ const archivoBlack = Archivo_Black({
 });
 
 /**
- * Metadata SEO básica a nivel de sitio.
- * Valores de ejemplo tipo `siteSettings` (plan, sección 22) — placeholders,
- * nunca datos reales inventados del candidato.
+ * Metadata SEO básica a nivel de sitio (plan, sección 22).
+ * Resumen factual con fuente pública — ver
+ * inventario_contenidos_web_luis_balladares_17sep2026.md, sección 2.
  */
 const siteName = "Luis Balladares — Alcaldía de Zamora";
 const siteDescription =
-  "[Contenido pendiente] Sitio informativo oficial de la candidatura de Luis Balladares a la Alcaldía de Zamora.";
+  "Luis Fernando Balladares Villavicencio, candidato a la Alcaldía del cantón Zamora por la alianza Fuerza Democrática. Trayectoria, propuestas y fuentes verificables.";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 
 export const metadata: Metadata = {

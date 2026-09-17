@@ -18,8 +18,9 @@ export function Footer() {
         <div>
           <p className="font-display text-base text-black">Luis Balladares</p>
           <p className="mt-2 max-w-sm">
-            [Contenido pendiente] — descripción institucional breve, responsable del sitio y
-            organización de campaña responsable. Ver /transparencia.
+            Candidato a la Alcaldía del cantón Zamora por la alianza Fuerza Democrática, listas
+            2-4-12-21. Responsable legal y financiero del sitio: pendiente de confirmación — ver
+            /transparencia.
           </p>
         </div>
 

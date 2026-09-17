@@ -1,10 +1,17 @@
+import Image from "next/image";
 import Link from "next/link";
+import logoLuchoBalladares from "../../../public/brand/logo-lucho-balladares.png";
 
 /**
  * Hero de homepage (plan, sección 8.1).
  * - min-height 100svh
  * - headline en HTML real (no imagen rasterizada)
  * - dos CTAs, sin autoplay, sin animación permanente
+ *
+ * El logotipo es un PNG con transparencia real (fondo negro solo por el
+ * viewer del editor); funciona sobre fondo oscuro como este Hero. Es un
+ * recorte del arte de campaña, no un SVG vectorial editable — ver
+ * linea_grafica_lucho_balladares.md.
  */
 export function Hero() {
   return (
@@ -14,6 +21,15 @@ export function Hero() {
     >
       <div className="container-max flex flex-col gap-8 py-16 md:py-24">
         <div>
+          <Image
+            src={logoLuchoBalladares}
+            alt="Logotipo de campaña: Lucho Balladares"
+            width={220}
+            height={165}
+            className="mb-8 h-auto w-44 sm:w-56"
+            priority
+          />
+
           {/* Retrato de Luis: placeholder. Pendiente retrato original en alta resolución
               con fondo transparente (sección 32 del plan). */}
           <div

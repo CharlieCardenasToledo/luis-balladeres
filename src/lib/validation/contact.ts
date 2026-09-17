@@ -27,6 +27,6 @@ export const contactFormSchema = z
     // Honeypot: campo invisible para personas, solo lo rellenan bots.
     website: z.string().max(0).optional().or(z.literal("")),
   })
-  .transform(({ website: _website, ...rest }) => rest);
+  .transform(({ name, contact, message, consent }) => ({ name, contact, message, consent }));
 
 export type ContactFormInput = z.infer<typeof contactFormSchema>;
