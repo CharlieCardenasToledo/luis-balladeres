@@ -58,10 +58,21 @@ npm run build
 - Layout raíz con header accesible (landmarks, menú hamburguesa móvil como
   Client Component) y footer con enlaces legales y descripción real de la
   candidatura.
-- Formulario de contacto funcional (`src/components/forms/ContactForm.tsx` +
-  `src/app/api/forms/contact/route.ts`): valida con Zod, honeypot, rate
-  limit básico en memoria, y guarda en `formSubmissions` vía Admin SDK.
-  Verificado end-to-end contra el proyecto Firebase real.
+- Formularios de contacto (`/contacto`) y reporte de errores
+  (`/reportar-error`, sección 47) funcionales: validan con Zod, honeypot,
+  rate limit básico en memoria, y guardan en `formSubmissions` vía Admin
+  SDK. Ambos verificados end-to-end contra el proyecto Firebase real.
+- Hero rediseñado (`src/components/home/Hero.tsx`): panel de marca a pantalla
+  completa con retrato real de cuerpo/plano medio (fondo transparente),
+  logotipo real, líneas decorativas y navegación (`HeroNav`) al pie que se
+  convierte en header fijo (`Header.tsx`) en cuanto esa barra alcanza el
+  borde superior del viewport — funciona incluso si el contenido del Hero
+  supera el alto de pantallas bajas. Logo/nav compartidos vía `BrandMark`,
+  `NavLinks` y `src/lib/nav.ts` entre `Header` y `HeroNav`.
+- Fotografías reales del candidato en `public/media/` (retrato de rostro y
+  plano medio, ambas con transparencia real) y logotipo de campaña en
+  `public/brand/`; favicon (`src/app/icon.png` / `apple-icon.png`) generado
+  a partir del check verde del logo.
 - Design tokens exactos del plan (colores, radios, espaciado, anchuras
   máximas) en `src/app/globals.css`. Tipografía: Inter (texto) y Archivo
   Black (titulares), vía `next/font/google`.
@@ -113,20 +124,25 @@ npm run build
    contacto) ninguna colección existe todavía en Firestore ni tiene datos
    semilla — el contenido de propuestas/trayectoria/territorio vive por ahora
    como constantes en el código, no en Firestore.
-6. **Formulario de reporte de errores** (`/reportar-error`, sección 47 del
-   plan) no está implementado; solo existe el de contacto.
+6. **Contenido gráfico**: ya integrados retrato, plano medio, logo y
+   favicon reales (ver arriba). Sigue faltando: SVG vectorial editable del
+   logo (el actual es un recorte raster del arte de campaña — ver
+   `linea_grafica_lucho_balladares.md`), fotos adicionales de eventos/
+   recorridos, y banco de video.
 
 ## Roadmap pendiente (plan maestro, sección 61)
 
-- **Fase 0 — Contenido y activos**: parcial. Logo (`logo.png`, pendiente de
-  integrar y de un SVG vectorial editable — ver sección 6). Aún faltan
-  retratos en alta resolución, CV, Plan de Trabajo CNE en PDF, confirmación
-  de redes/contacto oficiales y autorización de datos personales.
+- **Fase 0 — Contenido y activos**: parcial. Logo, retrato y plano medio
+  reales ya integrados (falta el SVG vectorial editable — ver sección 6 del
+  plan y `linea_grafica_lucho_balladares.md`). Aún faltan CV, Plan de
+  Trabajo CNE en PDF, confirmación de redes/contacto oficiales y
+  autorización de datos personales.
 - **Fase 1 — Diseño UX/UI**: wireframes y prototipo detallados, más allá de
   los tokens ya aplicados.
 - **Fase 2 — Base técnica**: Next.js + Tailwind + Firebase conectado +
-  Firestore/Storage rules escritas (no desplegadas) + formulario de contacto
-  funcional. Falta App Hosting, Auth admin y CI/CD.
+  Firestore/Storage rules escritas (no desplegadas) + formularios de
+  contacto y reporte de errores funcionales. Falta App Hosting, Auth admin
+  y CI/CD.
 - **Fase 3 — Contenido**: gran parte del contenido público ya está cargado y
   citado (ver arriba); falta lo que solo el candidato/campaña puede aportar.
 - **Fase 4 — Redes**: integración Facebook/Instagram/TikTok completa.
