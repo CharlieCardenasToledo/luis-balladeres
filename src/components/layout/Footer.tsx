@@ -37,10 +37,23 @@ export function Footer() {
       </div>
 
       <div className="border-t border-gray-100">
-        <p className="container-max py-4 text-xs text-gray-600">
-          © {year} Luis Balladares. [Contenido pendiente: aviso legal electoral y datos de
-          contacto autorizados].
-        </p>
+        <div className="container-max flex flex-col gap-2 py-4 text-xs text-gray-600 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {year} Luis Balladares. [Contenido pendiente: aviso legal electoral y datos de
+            contacto autorizados].
+          </p>
+          <p>
+            Desarrollado por{" "}
+            <a
+              href="https://charliecardenastoledo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 hover:underline"
+            >
+              Charlie Cárdenas Toledo
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
