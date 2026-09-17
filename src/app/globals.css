@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
-/* Design tokens — ver plan_web_luis_balladares_ux_ui_firebase.md secciones 4-5 */
+/* Design tokens — paleta real de linea_grafica_lucho_balladares.md,
+   extraida de la pieza grafica oficial (reemplaza la paleta generica
+   propuesta en plan_web_luis_balladares_ux_ui_firebase.md secciones 4-5).
+   Mediciones aproximadas de arte rasterizado: pedir manual de marca
+   o archivos vectoriales originales para ajuste fino. */
 :root {
-  --brand-orange: #e1451c;
-  --brand-orange-dark: #b93616;
+  --brand-magenta: #b70253;
+  --brand-wine: #84013e;
+  --brand-accent: #fa5d04;
+  --brand-green: #39973a;
 
-  --black: #0a0a0a;
+  --black: #070504;
   --charcoal: #191919;
   --white: #ffffff;
   --off-white: #f7f7f4;
@@ -40,8 +46,10 @@
 }
 
 @theme inline {
-  --color-brand-orange: var(--brand-orange);
-  --color-brand-orange-dark: var(--brand-orange-dark);
+  --color-brand-magenta: var(--brand-magenta);
+  --color-brand-wine: var(--brand-wine);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-green: var(--brand-green);
   --color-black: var(--black);
   --color-charcoal: var(--charcoal);
   --color-white: var(--white);
@@ -71,7 +79,7 @@ body {
 
 /* Accesibilidad: foco siempre visible, sin depender solo de color */
 :focus-visible {
-  outline: 3px solid var(--brand-orange);
+  outline: 3px solid var(--brand-accent);
   outline-offset: 2px;
 }
 

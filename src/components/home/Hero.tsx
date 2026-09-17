@@ -25,7 +25,7 @@ export function Hero() {
             pendiente
           </div>
 
-          <h1 className="font-display text-5xl uppercase leading-[0.95] tracking-tight text-brand-orange sm:text-7xl md:text-8xl">
+          <h1 className="font-display text-5xl uppercase leading-[0.95] tracking-tight text-brand-magenta sm:text-7xl md:text-8xl">
             Yo lucho
             <br />
             por Zamora
@@ -35,7 +35,7 @@ export function Hero() {
         <div className="flex flex-col gap-4 sm:flex-row">
           <Link
             href="/trayectoria"
-            className="flex min-h-11 items-center justify-center rounded-md bg-brand-orange px-6 text-base font-medium text-white hover:bg-brand-orange-dark"
+            className="flex min-h-11 items-center justify-center rounded-md bg-brand-magenta px-6 text-base font-medium text-white hover:bg-brand-wine"
           >
             Conocer trayectoria
           </Link>

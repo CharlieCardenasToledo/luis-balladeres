@@ -44,7 +44,7 @@ export function MobileNav({ items }: { items: readonly NavItem[] }) {
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex min-h-11 items-center text-base font-medium text-charcoal hover:text-brand-orange"
+                  className="flex min-h-11 items-center text-base font-medium text-charcoal hover:text-brand-magenta"
                 >
                   {item.label}
                 </Link>

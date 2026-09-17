@@ -41,3 +41,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# rtfm local index
+.rtfm/library.db
+.rtfm/rtfm.log
+.rtfm/touched_files.tmp

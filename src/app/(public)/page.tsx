@@ -16,7 +16,7 @@ export default function HomePage() {
       <HomeSection title="Quién es Luis" editorial cta={
         <Link
           href="/luis"
-          className="mt-4 inline-block font-medium text-brand-orange underline-offset-4 hover:underline"
+          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
         >
           Conocer trayectoria completa →
         </Link>
@@ -30,7 +30,7 @@ export default function HomePage() {
       <HomeSection title="Trayectoria verificable" cta={
         <Link
           href="/trayectoria"
-          className="mt-4 inline-block font-medium text-brand-orange underline-offset-4 hover:underline"
+          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
         >
           Ver trayectoria completa →
         </Link>
@@ -50,7 +50,7 @@ export default function HomePage() {
       <HomeSection title="Propuestas por tema" cta={
         <Link
           href="/propuestas"
-          className="mt-4 inline-block font-medium text-brand-orange underline-offset-4 hover:underline"
+          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
         >
           Ver todas las propuestas →
         </Link>
@@ -80,7 +80,7 @@ export default function HomePage() {
       <HomeSection title="Zamora / territorio" cta={
         <Link
           href="/territorio"
-          className="mt-4 inline-block font-medium text-brand-orange underline-offset-4 hover:underline"
+          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
         >
           Explorar el territorio →
         </Link>
@@ -94,7 +94,7 @@ export default function HomePage() {
       <HomeSection title="Agenda" cta={
         <Link
           href="/agenda"
-          className="mt-4 inline-block font-medium text-brand-orange underline-offset-4 hover:underline"
+          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
         >
           Ver agenda completa →
         </Link>
@@ -105,7 +105,7 @@ export default function HomePage() {
       <HomeSection title="Últimas publicaciones oficiales" cta={
         <Link
           href="/redes"
-          className="mt-4 inline-block font-medium text-brand-orange underline-offset-4 hover:underline"
+          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
         >
           Ver todas las publicaciones →
         </Link>
@@ -119,7 +119,7 @@ export default function HomePage() {
       <HomeSection title="Noticias y documentos" cta={
         <Link
           href="/noticias"
-          className="mt-4 inline-block font-medium text-brand-orange underline-offset-4 hover:underline"
+          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
         >
           Ver noticias →
         </Link>
@@ -130,7 +130,7 @@ export default function HomePage() {
       <HomeSection title="Contacto" editorial cta={
         <Link
           href="/contacto"
-          className="mt-4 inline-block font-medium text-brand-orange underline-offset-4 hover:underline"
+          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
         >
           Ir al formulario de contacto →
         </Link>

@@ -59,7 +59,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${archivoBlack.variable} antialiased`}>
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-brand-orange focus:px-4 focus:py-2 focus:text-white"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-brand-magenta focus:px-4 focus:py-2 focus:text-white"
         >
           Saltar al contenido principal
         </a>

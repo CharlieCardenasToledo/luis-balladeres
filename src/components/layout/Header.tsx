@@ -26,7 +26,7 @@ export function Header() {
           {/* Logo placeholder: pendiente logo oficial en SVG (sección 64 del plan) */}
           <span
             aria-hidden="true"
-            className="flex h-9 w-9 items-center justify-center rounded-sm bg-brand-orange text-white"
+            className="flex h-9 w-9 items-center justify-center rounded-sm bg-brand-magenta text-white"
           >
             LB
           </span>
@@ -40,7 +40,7 @@ export function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm font-medium text-charcoal underline-offset-4 hover:text-brand-orange hover:underline"
+                  className="text-sm font-medium text-charcoal underline-offset-4 hover:text-brand-magenta hover:underline"
                 >
                   {item.label}
                 </Link>
