@@ -72,22 +72,23 @@ export default function HomePage() {
         title="Quién es Luis"
         editorial
         pending={false}
+        surface="magenta"
         cta={
           <Link
             href="/luis"
-            className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
+            className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
           >
             Conocer trayectoria completa →
           </Link>
         }
       >
-        <p className="text-charcoal">
+        <p className="text-lg leading-8 text-white">
           Luis Fernando Balladares Villavicencio es profesional del Derecho y candidato a la
           Alcaldía del cantón Zamora por la alianza Fuerza Democrática, listas 2-4-12-21.
           Registros públicos documentan su trabajo en la Gobernación de Zamora Chinchipe, el
           Gobierno Provincial y el GAD Municipal de Zamora.
         </p>
-        <p className="mt-2 text-xs text-gray-600">
+        <p className="mt-3 text-xs leading-5 text-white/70">
           Fuente:{" "}
           <a href={CANDIDATURA_FUENTE} target="_blank" rel="noopener noreferrer" className="underline">
             InfoZamora, 21 de agosto de 2026
@@ -122,10 +123,11 @@ export default function HomePage() {
       <HomeSection
         title="Propuestas por tema"
         pending={false}
+        surface="wine"
         cta={
           <Link
             href="/propuestas"
-            className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
+            className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
           >
             Ver todas las propuestas →
           </Link>
@@ -136,14 +138,14 @@ export default function HomePage() {
             <Link
               key={category.slug}
               href={`/propuestas/${category.slug}`}
-              className="rounded-md border border-gray-300 bg-white p-4 hover:border-brand-magenta"
+              className="rounded-md border border-white/20 bg-off-white p-5 transition-transform hover:-translate-y-1 hover:border-brand-accent"
             >
               <p className="font-medium text-black">{category.title}</p>
               <p className="mt-1 text-sm text-gray-600">{category.summary}</p>
             </Link>
           ))}
         </div>
-        <p className="mt-4 text-xs text-gray-600">
+        <p className="mt-5 max-w-4xl text-xs leading-5 text-white/70">
           Declaraciones públicas recogidas por medios (
           <a href={PRIORIDADES_FUENTE} target="_blank" rel="noopener noreferrer" className="underline">
             InfoZamora, 28 de abril de 2026
@@ -177,30 +179,30 @@ export default function HomePage() {
         <p className="mt-2 text-xs text-gray-600">Fuente: INEC / Censo Ecuador 2022; GAD Municipal de Zamora.</p>
       </HomeSection>
 
-      <HomeSection title="Agenda" pending={false} pendingLabel="Sin agenda futura confirmada" cta={
+      <HomeSection title="Agenda" surface="magenta" pending={false} pendingLabel="Sin agenda futura confirmada" cta={
         <Link
           href="/agenda"
-          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
+          className="mt-5 inline-flex min-h-11 items-center rounded-md border border-white/50 px-5 font-medium text-white hover:border-white hover:bg-white hover:text-brand-wine"
         >
           Ver agenda completa →
         </Link>
       }>
-        <p className="text-charcoal">
+        <p className="max-w-3xl text-lg leading-8 text-white">
           No se encontró una agenda pública de próximos eventos verificable al 17 de septiembre de
           2026. El evento documentado más reciente es una entrevista programada para el 15 de
           septiembre de 2026 en RecTV Online.
         </p>
       </HomeSection>
 
-      <HomeSection title="Últimas publicaciones oficiales" cta={
+      <HomeSection title="Últimas publicaciones oficiales" surface="wine" cta={
         <Link
           href="/redes"
-          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
+          className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
         >
           Ver todas las publicaciones →
         </Link>
       }>
-        <p className="text-charcoal">
+        <p className="max-w-3xl text-lg leading-8 text-white">
           Sin sincronización automática todavía (Fase 4 del roadmap). El material de campaña
           suministrado muestra el identificador de Facebook <strong>LuchoBalladaresV</strong>; no
           se localizaron cuentas oficiales verificadas en Instagram, TikTok, X o YouTube.
@@ -229,15 +231,15 @@ export default function HomePage() {
         </ul>
       </HomeSection>
 
-      <HomeSection title="Contacto" editorial pending={false} cta={
+      <HomeSection title="Contacto" editorial surface="magenta" pending={false} cta={
         <Link
           href="/contacto"
-          className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
+          className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
         >
           Ir al formulario de contacto →
         </Link>
       }>
-        <p className="text-charcoal">
+        <p className="text-lg leading-8 text-white">
           Escríbenos por el formulario de contacto. No se verificó un correo, WhatsApp o teléfono
           oficial de campaña; el identificador de Facebook difundido en material de campaña es{" "}
           <strong>LuchoBalladaresV</strong>.

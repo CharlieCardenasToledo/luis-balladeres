@@ -64,7 +64,15 @@ export default function RootLayout({
           Saltar al contenido principal
         </a>
         <Header />
-        <main id="main-content">{children}</main>
+        {/*
+          pt-16 reserva el alto del header fijo (ver Header.tsx). El Hero
+          de la homepage cancela este padding con -mt-16 para ocupar
+          100svh reales; el resto de páginas lo necesita para que el
+          header fijo no tape el contenido.
+        */}
+        <main id="main-content" className="pt-16">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

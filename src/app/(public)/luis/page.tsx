@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SourceNote, NotFoundList } from "@/components/ui/SourceNote";
+import luisRetrato from "../../../../public/media/luis-retrato.png";
 
 export const metadata: Metadata = {
   title: "Luis",
@@ -19,7 +21,15 @@ const FUENTES_TRAYECTORIA = [
 export default function Page() {
   return (
     <div className="container-editorial py-16">
-      <h1 className="font-display text-3xl text-black sm:text-4xl">Luis</h1>
+      <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+        <Image
+          src={luisRetrato}
+          alt="Luis Fernando Balladares Villavicencio"
+          className="h-32 w-32 rounded-full object-cover object-top sm:h-40 sm:w-40"
+          priority
+        />
+        <h1 className="font-display text-3xl text-black sm:text-4xl">Luis</h1>
+      </div>
 
       <p className="mt-6 text-charcoal">
         Luis Fernando Balladares Villavicencio cursó Derecho en la Universidad Nacional de Loja,
