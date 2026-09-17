@@ -36,6 +36,30 @@ Para verificar el build de producción:
 npm run build
 ```
 
+Pruebas:
+
+```bash
+npm run test        # Vitest — esquemas de validación y datos de territorios
+npm run test:e2e    # Playwright — smoke tests de navegación y formularios
+```
+
+### Problema conocido: estilos/posicionamiento rotos en dev
+
+Varias veces durante el desarrollo, utilidades de Tailwind (`fixed`,
+`relative`, `translate-y-*`) dejaron de aplicarse en el navegador aunque
+las clases sí llegaban al HTML — normalmente después de instalar
+dependencias o tras muchos cambios de archivos seguidos con el servidor
+de `next dev` (Turbopack) ya corriendo. La causa es una caché de
+compilación incremental corrupta, no un error real de Tailwind ni del
+código. Si algo se ve/comporta mal de forma que no tiene sentido con el
+código fuente, antes de investigar más a fondo:
+
+```bash
+# detener el servidor de dev, luego:
+rm -rf .next
+npm run dev
+```
+
 ## Qué incluye este scaffold
 
 - Rutas públicas de la sección 7 del plan (`src/app/(public)/...`). La
@@ -146,8 +170,10 @@ npm run build
 - **Fase 3 — Contenido**: gran parte del contenido público ya está cargado y
   citado (ver arriba); falta lo que solo el candidato/campaña puede aportar.
 - **Fase 4 — Redes**: integración Facebook/Instagram/TikTok completa.
-- **Fase 5 — Calidad**: Lighthouse, Playwright, accesibilidad, SEO,
-  seguridad, pruebas responsive.
+- **Fase 5 — Calidad**: parcial. Vitest (esquemas de validación, datos de
+  territorios) y Playwright (smoke tests de navegación y formularios) ya
+  configurados y en verde. Falta Lighthouse, auditoría de accesibilidad
+  real y pruebas responsive sistemáticas.
 - **Fase 6 — Lanzamiento**: dominio, DNS, Search Console, backups,
   monitoreo.
 
