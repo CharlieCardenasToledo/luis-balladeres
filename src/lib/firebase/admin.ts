@@ -52,3 +52,29 @@ export function getAdminStorage() {
 export function getAdminAuth() {
   return getAuth(getAdminApp());
 }
+
+/**
+ * Verifica el header `X-Firebase-AppCheck` de una API route.
+ *
+ * Modo monitoreo (plan, sección 40 y 30 del plan de implementación):
+ * NUNCA lanza ni bloquea la solicitud — solo informa si el token es
+ * válido, ausente o inválido, para que las API routes registren la señal
+ * sin arriesgarse a bloquear tráfico legítimo mientras no se hayan
+ * observado unos días de métricas. Activar el bloqueo real es un cambio
+ * explícito posterior en cada route.ts, no aquí.
+ */
+export async function verifyAppCheckToken(
+  request: Request
+): Promise<{ verified: boolean; reason: "missing" | "invalid" | "ok" }> {
+  const token = request.headers.get("X-Firebase-AppCheck");
+  if (!token) return { verified: false, reason: "missing" };
+
+  try {
+    const { getAppCheck } = await import("firebase-admin/app-check");
+    await getAppCheck(getAdminApp()).verifyToken(token);
+    return { verified: true, reason: "ok" };
+  } catch (error) {
+    console.warn("App Check: token inválido (modo monitoreo, no se bloquea):", error);
+    return { verified: false, reason: "invalid" };
+  }
+}

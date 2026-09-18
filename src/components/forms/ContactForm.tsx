@@ -2,6 +2,7 @@
 
 import { useId, useState, type FormEvent } from "react";
 import Link from "next/link";
+import { getAppCheckToken } from "@/lib/firebase/app-check";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -37,9 +38,13 @@ export function ContactForm() {
     };
 
     try {
+      const appCheckToken = await getAppCheckToken();
       const response = await fetch("/api/forms/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          ...(appCheckToken ? { "X-Firebase-AppCheck": appCheckToken } : {}),
+        },
         body: JSON.stringify(payload),
       });
 

@@ -1,12 +1,13 @@
 import { NextResponse } from "next/server";
 import { FieldValue } from "firebase-admin/firestore";
-import { getAdminFirestore } from "@/lib/firebase/admin";
+import { getAdminFirestore, verifyAppCheckToken } from "@/lib/firebase/admin";
 import { reportErrorSchema } from "@/lib/validation/report-error";
 
 /**
  * Rate limit en memoria (por instancia) — misma limitación que
- * /api/forms/contact: no es distribuido, protección mínima mientras no
- * exista Firebase App Check (plan, secciones 40 y 56).
+ * /api/forms/contact: no es distribuido, protección mínima (plan,
+ * secciones 40 y 56). App Check corre en modo monitoreo (ver
+ * verifyAppCheckToken): todavía no bloquea, solo registra la señal.
  */
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = 5;
@@ -21,6 +22,11 @@ function isRateLimited(key: string): boolean {
 }
 
 export async function POST(request: Request) {
+  const appCheck = await verifyAppCheckToken(request);
+  if (!appCheck.verified) {
+    console.warn(`App Check (reportar-error) no verificado: ${appCheck.reason}`);
+  }
+
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
 
   if (isRateLimited(ip)) {

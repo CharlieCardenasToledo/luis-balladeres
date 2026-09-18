@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
+import { getAppCheckToken } from "@/lib/firebase/app-check";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -36,9 +37,13 @@ export function ReportErrorForm() {
     };
 
     try {
+      const appCheckToken = await getAppCheckToken();
       const response = await fetch("/api/forms/report-error", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          ...(appCheckToken ? { "X-Firebase-AppCheck": appCheckToken } : {}),
+        },
         body: JSON.stringify(payload),
       });
 

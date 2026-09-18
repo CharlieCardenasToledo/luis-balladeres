@@ -39,6 +39,11 @@ env:
     value: "1:91519097470:web:1941f0ba5a43d89435d62f"
     availability: [BUILD, RUNTIME]
 
+  # App Check (reCAPTCHA Enterprise) — clave de sitio, pública.
+  - variable: NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+    value: "6LeFSsEtAAAAAGt1CAHeV8VBHDJOtdLVUSL09LE1"
+    availability: [BUILD, RUNTIME]
+
   - variable: FIREBASE_STORAGE_BUCKET
     value: luis-balladeres.firebasestorage.app
     availability: [RUNTIME]
