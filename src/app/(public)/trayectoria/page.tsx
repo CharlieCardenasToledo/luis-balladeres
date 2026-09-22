@@ -3,7 +3,7 @@ import { SourceNote, NotFoundList } from "@/components/ui/SourceNote";
 
 export const metadata: Metadata = {
   title: "Trayectoria",
-  description: "Cronología verificable de la trayectoria pública de Luis Fernando Balladares Villavicencio.",
+  description: "La experiencia pública que Luis Balladares pone al servicio de Zamora.",
 };
 
 type TimelineItem = {
@@ -159,11 +159,12 @@ const TIMELINE: TimelineItem[] = [
 export default function Page() {
   return (
     <div className="container-editorial py-16">
-      <h1 className="font-display text-3xl text-black sm:text-4xl">Trayectoria</h1>
+      <p className="text-sm font-medium uppercase tracking-[0.18em] text-brand-magenta">Experiencia pública</p>
+      <h1 className="mt-3 font-display text-3xl text-black sm:text-4xl">Una trayectoria para servir mejor</h1>
       <p className="mt-4 text-sm text-gray-600">
-        Cronología construida solo con documentos oficiales (Registro Oficial, ordenanzas,
-        directorios institucionales) y notas de medios identificables. Los períodos sin fuente
-        suficiente se marcan como no encontrados en lugar de inferirse.
+        Antes de pedir confianza, una campaña debe mostrar cómo se ha preparado para gobernar. Esta
+        cronología reúne la experiencia pública documentada de Luis Balladares. Los períodos sin
+        fuente suficiente se marcan como no encontrados en lugar de inferirse.
       </p>
 
       <ol className="mt-8 flex flex-col gap-8 border-l border-gray-300 pl-6">

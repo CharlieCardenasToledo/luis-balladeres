@@ -36,14 +36,16 @@ const TRAYECTORIA_PREVIEW = [
 ];
 
 const PROPUESTAS_PREVIEW = [
-  { slug: "agua-y-saneamiento", title: "Agua y saneamiento", summary: "Fortalecimiento del sistema de agua potable y del alcantarillado." },
-  { slug: "ciudad-y-urbanismo", title: "Ciudad y urbanismo", summary: "Regeneración urbana del cantón." },
-  { slug: "turismo", title: "Turismo", summary: "Impulso al turismo de Zamora." },
-  { slug: "deporte", title: "Deporte", summary: "Fortalecimiento de espacios deportivos." },
-  { slug: "educacion", title: "Educación", summary: "Mejora de infraestructura educativa." },
-  { slug: "salud", title: "Salud", summary: "Articulación institucional y gestión de un nuevo hospital para Zamora." },
-  { slug: "parroquias", title: "Parroquias", summary: "Atención diferenciada según las necesidades de cada parroquia." },
-  { slug: "gestion-municipal", title: "Gestión municipal", summary: "Coordinación entre Prefectura, Municipio y gobiernos parroquiales." },
+  { slug: "agua-y-saneamiento", title: "Agua para vivir mejor", summary: "Agua potable, alcantarillado y saneamiento por etapas." },
+  { slug: "ciudad-y-urbanismo", title: "Una ciudad que funciona", summary: "Regeneración urbana, movilidad segura y espacios públicos activos." },
+  { slug: "turismo", title: "Zamora que se mueve", summary: "Turismo, mercados y oportunidades para emprender." },
+  { slug: "deporte", title: "Barrios con vida", summary: "Deporte, cultura, inclusión y escenarios que se mantengan." },
+];
+
+const EJES_PREVIEW = [
+  { title: "Cuidar", text: "Agua, fuentes, riberas y residuos con responsabilidad." },
+  { title: "Conectar", text: "Movilidad, internet y servicios para ciudad y parroquias." },
+  { title: "Cumplir", text: "Metas públicas, presupuesto participativo y seguimiento." },
 ];
 
 const NOTICIAS_PREVIEW = [
@@ -69,7 +71,7 @@ export default function HomePage() {
       <Hero />
 
       <HomeSection
-        title="Quién es Luis"
+        title="Una experiencia al servicio de Zamora"
         editorial
         pending={false}
         surface="magenta"
@@ -78,34 +80,35 @@ export default function HomePage() {
             href="/luis"
             className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
           >
-            Conocer trayectoria completa →
+            Conocer a Luis →
           </Link>
         }
       >
         <p className="text-lg leading-8 text-white">
           Luis Fernando Balladares Villavicencio es profesional del Derecho y candidato a la
-          Alcaldía del cantón Zamora por la alianza Fuerza Democrática, listas 2-4-12-21.
-          Registros públicos documentan su trabajo en la Gobernación de Zamora Chinchipe, el
-          Gobierno Provincial y el GAD Municipal de Zamora.
+          Alcaldía del cantón Zamora. Su experiencia en la Gobernación, el Gobierno Provincial y
+          el GAD Municipal le permite conocer cómo se coordinan las instituciones y qué hace falta
+          para convertir una decisión en una obra y un servicio.
         </p>
         <p className="mt-3 text-xs leading-5 text-white/70">
           Fuente:{" "}
           <a href={CANDIDATURA_FUENTE} target="_blank" rel="noopener noreferrer" className="underline">
             InfoZamora, 21 de agosto de 2026
           </a>
-          . Datos biográficos personales (nacimiento, familia) no disponibles públicamente.
+          . La candidatura está registrada por Fuerza Democrática, listas 2-4-12-21. La información
+          personal no documentada no se presenta como hecho.
         </p>
       </HomeSection>
 
       <HomeSection
-        title="Trayectoria verificable"
+        title="Experiencia para hacer que las cosas pasen"
         pending={false}
         cta={
           <Link
             href="/trayectoria"
             className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
           >
-            Ver trayectoria completa →
+            Ver experiencia y fuentes →
           </Link>
         }
       >
@@ -121,7 +124,7 @@ export default function HomePage() {
       </HomeSection>
 
       <HomeSection
-        title="Propuestas por tema"
+        title="Un proyecto para vivir mejor en Zamora"
         pending={false}
         surface="wine"
         cta={
@@ -129,7 +132,7 @@ export default function HomePage() {
             href="/propuestas"
             className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
           >
-            Ver todas las propuestas →
+            Explorar el proyecto →
           </Link>
         }
       >
@@ -146,78 +149,94 @@ export default function HomePage() {
           ))}
         </div>
         <p className="mt-5 max-w-4xl text-xs leading-5 text-white/70">
-          Declaraciones públicas recogidas por medios (
+          La matriz 2027–2031 organiza cinco ejes de trabajo: cuidado del territorio, economía
+          local, bienestar, conectividad y un Municipio transparente. Las propuestas se presentan
+          con su viabilidad y forma de ejecución; no sustituyen el Plan CNE hasta que ese documento
+          oficial esté disponible (
           <a href={PRIORIDADES_FUENTE} target="_blank" rel="noopener noreferrer" className="underline">
             InfoZamora, 28 de abril de 2026
           </a>
           ). El Plan de Trabajo oficial presentado al CNE no ha sido localizado públicamente
-          todavía — ver{" "}
+          todavía — consulta la{" "}
           <Link href="/plan-de-trabajo" className="underline">
-            /plan-de-trabajo
+            matriz completa
           </Link>
           .
         </p>
       </HomeSection>
 
       <HomeSection
-        title="Zamora / territorio"
+        title="Una mirada común, barrio por barrio"
         pending={false}
         cta={
           <Link
             href="/territorio"
             className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
           >
-            Explorar el territorio →
+            Conocer Zamora →
           </Link>
         }
       >
         <p className="text-charcoal">
-          El cantón Zamora tiene 30.186 habitantes (Censo 2022) y se organiza en las parroquias
-          urbanas Zamora y El Limón, y las parroquias rurales Cumbaratza, Guadalupe, Imbana,
-          Sabanilla, San Carlos de las Minas y Timbara.
+          Zamora no es una sola realidad. La ciudad y sus parroquias necesitan prioridades distintas,
+          pero una misma forma de trabajar: escuchar, ordenar y volver público el avance.
         </p>
         <p className="mt-2 text-xs text-gray-600">Fuente: INEC / Censo Ecuador 2022; GAD Municipal de Zamora.</p>
       </HomeSection>
 
-      <HomeSection title="Agenda" surface="magenta" pending={false} pendingLabel="Sin agenda futura confirmada" cta={
-        <Link
-          href="/agenda"
-          className="mt-5 inline-flex min-h-11 items-center rounded-md border border-white/50 px-5 font-medium text-white hover:border-white hover:bg-white hover:text-brand-wine"
-        >
-          Ver agenda completa →
-        </Link>
-      }>
-        <p className="max-w-3xl text-lg leading-8 text-white">
-          No se encontró una agenda pública de próximos eventos verificable al 17 de septiembre de
-          2026. El evento documentado más reciente es una entrevista programada para el 15 de
-          septiembre de 2026 en RecTV Online.
+      <HomeSection title="Tres compromisos para empezar" surface="wine" pending={false}>
+        <div className="grid gap-4 sm:grid-cols-3">
+          {EJES_PREVIEW.map((item) => (
+            <div key={item.title} className="border-l-2 border-brand-accent pl-4">
+              <p className="font-display text-xl text-white">{item.title}</p>
+              <p className="mt-2 text-sm leading-6 text-white/80">{item.text}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 max-w-2xl text-sm leading-6 text-white/80">
+          No se trata solo de anunciar obras: se trata de definir prioridades, explicar cómo se
+          ejecutan y permitir que la ciudadanía las supervise.
         </p>
       </HomeSection>
 
-      <HomeSection title="Últimas publicaciones oficiales" surface="wine" cta={
+      <HomeSection title="Participa en la campaña" surface="magenta" pending={false} cta={
+        <Link
+          href="/contacto"
+          className="mt-5 inline-flex min-h-11 items-center rounded-md border border-white/50 px-5 font-medium text-white hover:border-white hover:bg-white hover:text-brand-wine"
+        >
+          Quiero participar →
+        </Link>
+      }>
+        <p className="max-w-3xl text-lg leading-8 text-white">
+          La campaña se construye conversando con la gente de Zamora. Comparte tus prioridades,
+          conoce las propuestas y ayúdanos a llevarlas a cada barrio y parroquia.
+        </p>
+      </HomeSection>
+
+      <HomeSection title="Información para decidir" surface="wine" cta={
         <Link
           href="/redes"
           className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
         >
-          Ver todas las publicaciones →
+          Ver fuentes y novedades →
         </Link>
       }>
         <p className="max-w-3xl text-lg leading-8 text-white">
-          Sin sincronización automática todavía (Fase 4 del roadmap). El material de campaña
-          suministrado muestra el identificador de Facebook <strong>LuchoBalladaresV</strong>; no
-          se localizaron cuentas oficiales verificadas en Instagram, TikTok, X o YouTube.
+          Una decisión informada necesita propuestas claras, experiencia comprobable y fuentes
+          abiertas. Aquí puedes revisar la trayectoria, la matriz de propuestas y las novedades que
+          se vayan confirmando.
         </p>
       </HomeSection>
 
       <HomeSection
-        title="Noticias y documentos"
+        title="Conoce. Participa. Decide."
         pending={false}
         cta={
           <Link
             href="/noticias"
             className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
           >
-            Ver noticias →
+            Ver novedades →
           </Link>
         }
       >
@@ -231,18 +250,17 @@ export default function HomePage() {
         </ul>
       </HomeSection>
 
-      <HomeSection title="Contacto" editorial surface="magenta" pending={false} cta={
+      <HomeSection title="Da el siguiente paso" editorial surface="magenta" pending={false} cta={
         <Link
           href="/contacto"
           className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
         >
-          Ir al formulario de contacto →
+          Súmate a la campaña →
         </Link>
       }>
         <p className="text-lg leading-8 text-white">
-          Escríbenos por el formulario de contacto. No se verificó un correo, WhatsApp o teléfono
-          oficial de campaña; el identificador de Facebook difundido en material de campaña es{" "}
-          <strong>LuchoBalladaresV</strong>.
+          Comparte qué necesita tu barrio o parroquia. El formulario es el canal para escuchar
+          prioridades y mantener abierta la conversación con la campaña.
         </p>
       </HomeSection>
     </>

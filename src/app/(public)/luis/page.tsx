@@ -6,7 +6,7 @@ import luisRetrato from "../../../../public/media/luis-retrato.png";
 export const metadata: Metadata = {
   title: "Luis",
   description:
-    "Luis Fernando Balladares Villavicencio: trayectoria pública y formación, con fuentes verificables.",
+    "Conoce a Luis Balladares, su experiencia pública y la forma de trabajar que propone para Zamora.",
 };
 
 const FUENTES_FORMACION = [{ label: "Directorio de graduados, Universidad Nacional de Loja", url: "https://alumni.unl.edu.ec/directorio/listar_carrera/2/B" }];
@@ -28,12 +28,20 @@ export default function Page() {
           className="h-32 w-32 rounded-full object-cover object-top sm:h-40 sm:w-40"
           priority
         />
-        <h1 className="font-display text-3xl text-black sm:text-4xl">Luis</h1>
+        <div>
+          <p className="text-sm font-medium uppercase tracking-[0.18em] text-brand-magenta">El candidato</p>
+          <h1 className="mt-2 font-display text-3xl text-black sm:text-4xl">Una experiencia al servicio de Zamora</h1>
+        </div>
       </div>
 
-      <p className="mt-6 text-charcoal">
-        Luis Fernando Balladares Villavicencio cursó Derecho en la Universidad Nacional de Loja,
-        cuyo directorio de graduados registra su nombre en esa carrera con el año 2007.
+      <p className="mt-6 text-lg leading-8 text-charcoal">
+        Luis Fernando Balladares Villavicencio conoce la gestión pública desde dentro. Su propuesta
+        es poner esa experiencia al servicio de una Zamora que cuide sus recursos, ordene sus
+        prioridades y rinda cuentas de cada avance.
+      </p>
+      <p className="mt-4 text-charcoal">
+        Cursó Derecho en la Universidad Nacional de Loja, cuyo directorio de graduados registra su
+        nombre en esa carrera con el año 2007.
       </p>
       <SourceNote status="Verificado — fuente universitaria" sources={FUENTES_FORMACION} />
 

@@ -93,25 +93,35 @@ export function Hero() {
           <Image src={logoLuchoBalladares} alt="" aria-hidden="true" className="h-auto w-48 sm:w-64" />
 
           <h1 className="font-display text-5xl uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl">
-            Yo lucho
+            Zamora
             <br />
-            por Zamora
+            puede avanzar
           </h1>
+
+          <p className="max-w-xl text-lg leading-7 text-white/90 sm:text-xl">
+            Una gestión cercana, ordenada y con proyectos que se puedan ver en cada barrio y
+            parroquia.
+          </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link
-              href="/trayectoria"
-              className="flex min-h-11 items-center justify-center rounded-md bg-black px-6 text-base font-medium text-white hover:bg-charcoal"
+              href="/propuestas"
+              className="flex min-h-11 items-center justify-center rounded-md bg-white px-6 text-base font-medium text-brand-wine hover:bg-off-white"
             >
-              Conocer trayectoria
+              Conoce el proyecto
             </Link>
             <Link
-              href="/propuestas"
+              href="/contacto"
               className="flex min-h-11 items-center justify-center rounded-md border border-white/50 px-6 text-base font-medium text-white hover:border-white"
             >
-              Ver propuestas
+              Súmate a la campaña
             </Link>
           </div>
+
+          <p className="max-w-lg text-xs leading-5 text-white/65">
+            Luis Fernando Balladares · candidato a la Alcaldía del cantón Zamora · Fuerza
+            Democrática, listas 2-4-12-21.
+          </p>
         </div>
       </div>
 

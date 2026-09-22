@@ -4,7 +4,7 @@ import { SourceNote } from "@/components/ui/SourceNote";
 
 export const metadata: Metadata = {
   title: "Propuestas",
-  description: "Áreas prioritarias declaradas públicamente por Luis Balladares, con fuente.",
+  description: "El proyecto de Luis Balladares para una Zamora con servicios, oportunidades y participación.",
 };
 
 const CATEGORIES = [
@@ -21,16 +21,17 @@ const CATEGORIES = [
 export default function Page() {
   return (
     <div className="container-editorial py-16">
-      <h1 className="font-display text-3xl text-black sm:text-4xl">Propuestas</h1>
+      <p className="text-sm font-medium uppercase tracking-[0.18em] text-brand-magenta">El proyecto</p>
+      <h1 className="mt-3 font-display text-3xl text-black sm:text-4xl">Una Zamora que avanza</h1>
 
       <p className="mt-4 text-charcoal">
-        Hasta la fecha, las propuestas verificables provienen de declaraciones públicas recogidas
-        por medios el 28 de abril de 2026 y en la presentación de candidaturas del 18 de agosto de
-        2026. <strong>No se localizó el Plan de Trabajo oficial presentado al CNE</strong>, por lo
-        que estas declaraciones no sustituyen a ese documento.
+        El proyecto de Luis Balladares parte de una idea sencilla: el Municipio debe cuidar lo que
+        ya existe, ordenar el crecimiento y hacer visibles sus resultados. Aquí puedes conocer los
+        temas que orientan la campaña y revisar la matriz 2027–2031 con propuestas, viabilidad y
+        formas de ejecución.
       </p>
       <SourceNote
-        status="Verificado — declaraciones recogidas por medios"
+        status="Fuentes públicas y matriz de trabajo suministrada por el equipo"
         sources={[
           { label: "InfoZamora, 28 de abril de 2026", url: "https://infozamoraec.com/index.php/2026/04/28/luis-balladarez-oficializa-su-candidatura-a-la-alcaldia-de-zamora-y-plantea-prioridades-para-el-canton/" },
           { label: "Alianza Fuerza — presentación de candidaturas, 19 de agosto de 2026", url: "https://infozamoraec.com/index.php/2026/08/19/alianza-fuerza-presento-a-sus-candidatos-para-las-elecciones-2027-en-zamora-chinchipe/" },
@@ -38,11 +39,11 @@ export default function Page() {
       />
 
       <div className="mt-6 rounded-md border border-brand-magenta/30 bg-brand-magenta/5 p-5">
-        <p className="font-medium text-black">Nueva matriz de trabajo 2027–2031</p>
+        <p className="font-medium text-black">El proyecto completo 2027–2031</p>
         <p className="mt-1 text-sm leading-6 text-gray-700">
-          El equipo entregó una matriz política y técnica con cinco ejes, propuestas priorizadas,
-          criterios de viabilidad y mensajes de campaña. Está organizada por separado porque no
-          sustituye el Plan de Trabajo oficial presentado al CNE.
+          Cinco ejes para cuidar el territorio, mover la economía local, ampliar el bienestar,
+          conectar ciudad y parroquias y construir un Municipio transparente. Está organizada por
+          separado porque no sustituye el Plan de Trabajo oficial presentado al CNE.
         </p>
         <Link href="/plan-de-trabajo" className="mt-3 inline-block font-medium text-brand-magenta underline">
           Consultar la matriz completa →
@@ -63,10 +64,9 @@ export default function Page() {
       </div>
 
       <p className="mt-8 text-sm text-gray-600">
-        Otros temas frecuentes en campañas municipales (seguridad ciudadana, empleo, movilidad,
-        vivienda, ambiente, cultura, entre otros) no cuentan todavía con una propuesta específica
-        atribuible directamente al candidato en las fuentes revisadas, por lo que no se publican
-        como propuestas propias.
+        Cada propuesta deberá convertirse en una ficha pública con responsable, presupuesto, avance
+        y resultados. Los detalles que todavía requieren estudios no se presentan como promesas
+        cerradas: se identifican para que la ciudadanía pueda exigir claridad antes de ejecutarlos.
       </p>
     </div>
   );
