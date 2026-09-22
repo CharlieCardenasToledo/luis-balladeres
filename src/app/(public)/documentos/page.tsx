@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { NotFoundList } from "@/components/ui/SourceNote";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Documentos",
@@ -20,6 +21,7 @@ const DOCUMENTS = [
 ];
 
 export default function Page() {
+  redirect("/trayectoria");
   return (
     <div className="container-editorial py-16">
       <h1 className="font-display text-3xl text-black sm:text-4xl">Documentos</h1>

@@ -78,7 +78,7 @@ export const AXES: Axis[] = [
 export default function Page() {
   return (
     <div className="container-editorial py-16">
-      <p className="text-sm font-medium uppercase tracking-[0.18em] text-brand-magenta">Documento de trabajo</p>
+      <p className="text-sm font-medium uppercase tracking-[0.18em] text-brand-magenta">Proyecto municipal</p>
       <h1 className="mt-3 font-display text-3xl text-black sm:text-4xl">Matriz de propuestas 2027–2031</h1>
       <p className="mt-4 text-charcoal">
         Esta matriz organiza la información entregada para la formulación política y técnica de una

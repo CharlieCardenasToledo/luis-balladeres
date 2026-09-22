@@ -82,8 +82,7 @@ export default function HomePage() {
           para convertir una decisión en una obra y un servicio.
         </p>
         <p className="mt-3 text-xs leading-5 text-white/70">
-          La candidatura está registrada por Fuerza Democrática, listas 2-4-12-21. La información
-          personal no documentada no se presenta como hecho.
+          La candidatura está registrada por Fuerza Democrática, listas 2-4-12-21.
         </p>
       </HomeSection>
 
@@ -199,7 +198,7 @@ export default function HomePage() {
       }>
         <p className="max-w-3xl text-lg leading-8 text-white">
           Una decisión informada necesita propuestas claras, experiencia comprobable y novedades
-          verificables. Aquí puedes revisar la trayectoria, la matriz de propuestas y la actualidad
+          claras. Aquí puedes revisar la trayectoria, la matriz de propuestas y la actualidad
           de la campaña.
         </p>
       </HomeSection>

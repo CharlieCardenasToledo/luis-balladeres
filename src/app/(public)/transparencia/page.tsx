@@ -19,16 +19,12 @@ export default function Page() {
         agosto de 2026 y su notificación el 20 de agosto de 2026; el medio consultado señala
         ausencia de objeciones en el procedimiento correspondiente.
       </p>
-      <h2 className="mt-8 font-display text-xl text-black">Trayectoria documentada</h2>
+      <h2 className="mt-8 font-display text-xl text-black">Trayectoria</h2>
       <p className="mt-2 text-charcoal">
         Conoce el detalle completo de la experiencia pública en{" "}
         <Link href="/trayectoria" className="underline">
           /trayectoria
         </Link>{" "}
-        y en{" "}
-        <Link href="/documentos" className="underline">
-          /documentos
-        </Link>
         .
       </p>
 

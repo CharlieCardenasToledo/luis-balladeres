@@ -3,7 +3,7 @@ import { SourceNote } from "@/components/ui/SourceNote";
 
 export const metadata: Metadata = {
   title: "Agenda",
-  description: "Eventos públicos documentados de la campaña de Luis Balladares.",
+  description: "Eventos públicos de la campaña de Luis Balladares.",
 };
 
 const PAST_EVENTS = [
@@ -30,7 +30,7 @@ export default function Page() {
     <div className="container-editorial py-16">
       <h1 className="font-display text-3xl text-black sm:text-4xl">Agenda</h1>
 
-      <h2 className="mt-8 font-display text-xl text-black">Eventos pasados documentados</h2>
+      <h2 className="mt-8 font-display text-xl text-black">Eventos de campaña</h2>
       <ul className="mt-4 flex flex-col gap-6 border-l border-gray-300 pl-6">
         {PAST_EVENTS.map((event) => (
           <li key={event.title}>
