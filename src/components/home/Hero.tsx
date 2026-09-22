@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HeroNav } from "./HeroNav";
+import { MobileNav } from "../layout/MobileNav";
 import logoLuchoBalladares from "../../../public/brand/logo-lucho-balladares.png";
 import luisPlanomedio from "../../../public/media/luis-planomedio.png";
+import luisRetrato from "../../../public/media/luis-retrato.png";
 
 /**
  * Lenguaje gráfico inspirado en curvas de nivel y cauces de Zamora.
@@ -71,11 +73,48 @@ export function Hero() {
   return (
     <section
       aria-label="Presentación"
-      className="relative -mt-16 flex min-h-[100svh] flex-col overflow-hidden bg-brand-magenta text-white"
+      className="relative -mt-16 flex min-h-[100svh] flex-col overflow-hidden bg-[#a59bc9] text-white md:bg-brand-magenta"
     >
       <HeroTerrainLines />
 
-      <div className="container-max relative z-10 grid flex-1 grid-cols-1 lg:grid-cols-2">
+      <div className="relative z-30 flex items-center justify-between bg-white px-5 py-4 md:hidden">
+        <div className="flex items-center gap-3 text-brand-wine" aria-label="Redes sociales">
+          <Link href="/redes" aria-label="Facebook" className="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-brand-wine text-2xl font-bold">f</Link>
+          <Link href="/redes" aria-label="Twitter" className="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-brand-wine text-xl font-bold">♥</Link>
+          <Link href="/redes" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-brand-wine text-xl font-bold">◎</Link>
+        </div>
+        <MobileNav buttonClassName="border-transparent text-brand-wine" />
+      </div>
+
+      <div className="relative z-10 min-h-[calc(100svh-76px)] px-5 pb-12 pt-8 md:hidden">
+        <Image
+          src={luisRetrato}
+          alt="Luis Fernando Balladares Villavicencio"
+          priority
+          className="absolute inset-x-0 bottom-0 h-[78%] w-full object-contain object-bottom"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#a59bc9]/5 via-[#a59bc9]/10 to-[#a59bc9]/25" />
+        <div className="relative z-10 flex h-full flex-col">
+          <Image src={logoLuchoBalladares} alt="Lucho Balladares" className="h-auto w-64 brightness-0 invert" priority />
+          <div className="mt-auto pt-40">
+            <h1 className="text-center font-display text-4xl leading-[0.98] text-white">Yo lucho por Zamora</h1>
+            <p className="mt-3 text-center text-lg font-semibold leading-6 text-white">Únete a nuestra campaña</p>
+            <p className="text-center text-base font-semibold leading-6 text-white">para recibir información y actualizaciones</p>
+            <div className="mt-6 grid gap-3">
+              <input aria-label="Nombre" placeholder="Nombre*" className="h-16 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
+              <input aria-label="Correo electrónico" placeholder="Correo electrónico*" className="h-16 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
+              <input aria-label="Número" placeholder="Número" className="h-16 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
+              <div className="grid grid-cols-[1fr_1.2fr] gap-3">
+                <input aria-label="Código postal" placeholder="Código postal*" className="h-16 min-w-0 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
+                <Link href="/contacto" className="flex h-16 items-center justify-center bg-brand-wine px-3 text-center text-sm font-bold uppercase tracking-wide text-white">Únete a nosotros</Link>
+              </div>
+            </div>
+            <p className="mt-4 text-sm italic leading-6 text-white/95">Comparte tus prioridades y recibe información de la campaña. Al continuar aceptas nuestra política de privacidad.</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="container-max relative z-10 hidden flex-1 grid-cols-1 lg:grid lg:grid-cols-2">
         <div className="relative order-1 flex items-end justify-center pt-12 lg:h-full lg:items-end lg:justify-start lg:pt-0">
           <div className="relative h-72 w-56 sm:h-96 sm:w-72 lg:h-full lg:w-full lg:max-h-[720px]">
             <Image
