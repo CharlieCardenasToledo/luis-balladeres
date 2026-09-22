@@ -91,7 +91,7 @@ export function Hero() {
           src={luisRetrato}
           alt="Luis Fernando Balladares Villavicencio"
           priority
-          className="absolute inset-x-0 bottom-0 h-[78%] w-full object-contain object-bottom"
+          className="absolute inset-x-0 top-20 h-[78%] w-full object-contain object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-wine/10 via-brand-magenta/20 to-brand-wine/45" />
         <div className="relative z-10 flex h-full flex-col">
