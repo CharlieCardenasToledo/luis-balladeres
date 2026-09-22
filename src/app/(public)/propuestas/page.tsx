@@ -27,8 +27,8 @@ export default function Page() {
       <p className="mt-4 text-charcoal">
         El proyecto de Luis Balladares parte de una idea sencilla: el Municipio debe cuidar lo que
         ya existe, ordenar el crecimiento y hacer visibles sus resultados. Aquí puedes conocer los
-        temas que orientan la campaña y revisar la matriz 2027–2031 con propuestas, viabilidad y
-        formas de ejecución.
+        temas que orientan la campaña y revisar, directamente en esta web, la matriz 2027–2031 con
+        sus propuestas, viabilidad y formas de ejecución.
       </p>
       <SourceNote
         status="Fuentes públicas y matriz de trabajo suministrada por el equipo"
@@ -45,7 +45,7 @@ export default function Page() {
           conectar ciudad y parroquias y construir un Municipio transparente.
         </p>
         <Link href="/plan-de-trabajo" className="mt-3 inline-block font-medium text-brand-magenta underline">
-          Consultar la matriz completa →
+          Ver toda la matriz organizada en la web →
         </Link>
       </div>
 
@@ -62,11 +62,16 @@ export default function Page() {
         ))}
       </div>
 
-      <p className="mt-8 text-sm text-gray-600">
-        Cada propuesta deberá convertirse en una ficha pública con responsable, presupuesto, avance
-        y resultados. Los detalles que todavía requieren estudios no se presentan como promesas
-        cerradas: se identifican para que la ciudadanía pueda exigir claridad antes de ejecutarlos.
-      </p>
+      <div className="mt-8 rounded-md border border-gray-300 bg-white p-5">
+        <p className="font-medium text-black">Toda la información está disponible aquí</p>
+        <p className="mt-1 text-sm leading-6 text-gray-600">
+          La matriz completa está organizada por cinco ejes y se puede leer en línea, sin descargar
+          archivos: cada propuesta incluye su origen, viabilidad, forma de ejecución y mensaje.
+        </p>
+        <Link href="/plan-de-trabajo" className="mt-3 inline-block font-medium text-brand-magenta underline">
+          Abrir la matriz completa →
+        </Link>
+      </div>
     </div>
   );
 }

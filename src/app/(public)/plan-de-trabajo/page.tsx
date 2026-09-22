@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Matriz de propuestas 2027–2031",
@@ -119,9 +118,9 @@ export default function Page() {
         ))}
       </div>
 
-      <p className="mt-10 text-sm text-gray-600">
-        Para consultar el contenido público previamente documentado por medios, visita la sección de{" "}
-        <Link href="/propuestas" className="font-medium text-brand-magenta underline">propuestas por tema</Link>.
+      <p className="mt-10 rounded-md border border-brand-magenta/20 bg-brand-magenta/5 p-4 text-sm leading-6 text-gray-700">
+        Esta matriz se puede leer completa en línea. No necesitas descargar ningún archivo: navega
+        por cada eje para revisar sus propuestas, viabilidad, ejecución y mensaje.
       </p>
     </div>
   );
