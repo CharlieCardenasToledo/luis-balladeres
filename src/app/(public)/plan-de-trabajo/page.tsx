@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Matriz política y técnica de propuestas para la Alcaldía de Zamora 2027–2031.",
 };
 
-type Proposal = {
+export type Proposal = {
   title: string;
   origin: "Idea del candidato" | "Derivada del PDOT/PUGS";
   viability: string;
@@ -13,9 +13,9 @@ type Proposal = {
   message: string;
 };
 
-type Axis = { title: string; objective: string; proposals: Proposal[] };
+export type Axis = { title: string; objective: string; proposals: Proposal[] };
 
-const AXES: Axis[] = [
+export const AXES: Axis[] = [
   {
     title: "Eje 1 · Biofísico y resiliencia territorial",
     objective: "Proteger agua, suelo, paisaje y población frente a riesgos, y mejorar progresivamente el saneamiento y la gestión de residuos.",

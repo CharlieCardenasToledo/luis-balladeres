@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SourceNote } from "@/components/ui/SourceNote";
+import { AXES } from "@/app/(public)/plan-de-trabajo/page";
 
 export const metadata: Metadata = {
   title: "Propuestas",
@@ -44,9 +45,6 @@ export default function Page() {
           Cinco ejes para cuidar el territorio, mover la economía local, ampliar el bienestar,
           conectar ciudad y parroquias y construir un Municipio transparente.
         </p>
-        <Link href="/plan-de-trabajo" className="mt-3 inline-block font-medium text-brand-magenta underline">
-          Ver toda la matriz organizada en la web →
-        </Link>
       </div>
 
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -62,16 +60,36 @@ export default function Page() {
         ))}
       </div>
 
-      <div className="mt-8 rounded-md border border-gray-300 bg-white p-5">
-        <p className="font-medium text-black">Toda la información está disponible aquí</p>
-        <p className="mt-1 text-sm leading-6 text-gray-600">
-          La matriz completa está organizada por cinco ejes y se puede leer en línea, sin descargar
-          archivos: cada propuesta incluye su origen, viabilidad, forma de ejecución y mensaje.
+      <section className="mt-10" aria-labelledby="matriz-propuestas">
+        <h2 id="matriz-propuestas" className="font-display text-2xl text-black sm:text-3xl">Proyecto 2027–2031</h2>
+        <p className="mt-3 text-sm leading-6 text-gray-700">
+          Aquí está toda la matriz, organizada por ejes. Cada propuesta incluye su origen,
+          viabilidad, forma de ejecución y mensaje.
         </p>
-        <Link href="/plan-de-trabajo" className="mt-3 inline-block font-medium text-brand-magenta underline">
-          Abrir la matriz completa →
-        </Link>
-      </div>
+        <div className="mt-6 flex flex-col gap-4">
+          {AXES.map((axis) => (
+            <details key={axis.title} className="group rounded-lg border border-gray-300 bg-white p-5 open:border-brand-magenta">
+              <summary className="cursor-pointer list-none pr-8 font-display text-xl text-black marker:hidden">
+                <span className="group-open:text-brand-magenta">{axis.title}</span>
+              </summary>
+              <p className="mt-3 text-sm leading-6 text-gray-700">{axis.objective}</p>
+              <div className="mt-5 grid gap-4">
+                {axis.proposals.map((proposal) => (
+                  <article key={proposal.title} className="rounded-md border border-gray-200 bg-off-white p-4">
+                    <h3 className="font-medium text-black">{proposal.title}</h3>
+                    <div className="mt-2 flex flex-wrap gap-2 text-xs">
+                      <span className="rounded-full bg-brand-wine/10 px-2 py-1 text-brand-wine">{proposal.origin}</span>
+                      <span className="rounded-full bg-brand-magenta/10 px-2 py-1 text-brand-magenta">{proposal.viability}</span>
+                    </div>
+                    <p className="mt-3 text-sm leading-6 text-gray-700"><strong className="text-black">Ejecución:</strong> {proposal.execution}</p>
+                    <p className="mt-2 text-sm leading-6 text-gray-700"><strong className="text-black">Mensaje:</strong> “{proposal.message}”</p>
+                  </article>
+                ))}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
