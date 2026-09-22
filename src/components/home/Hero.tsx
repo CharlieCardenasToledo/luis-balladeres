@@ -73,7 +73,7 @@ export function Hero() {
   return (
     <section
       aria-label="Presentación"
-      className="relative -mt-16 flex min-h-[100svh] flex-col overflow-hidden bg-[#a59bc9] text-white md:bg-brand-magenta"
+      className="relative -mt-16 flex min-h-[100svh] flex-col overflow-hidden bg-brand-magenta text-white"
     >
       <HeroTerrainLines />
 
@@ -93,9 +93,9 @@ export function Hero() {
           priority
           className="absolute inset-x-0 bottom-0 h-[78%] w-full object-contain object-bottom"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#a59bc9]/5 via-[#a59bc9]/10 to-[#a59bc9]/25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-wine/10 via-brand-magenta/20 to-brand-wine/45" />
         <div className="relative z-10 flex h-full flex-col">
-          <Image src={logoLuchoBalladares} alt="Lucho Balladares" className="h-auto w-64 brightness-0 invert" priority />
+          <Image src={logoLuchoBalladares} alt="Lucho Balladares" className="h-auto w-64" priority />
           <div className="mt-auto pt-40">
             <h1 className="text-center font-display text-4xl leading-[0.98] text-white">Yo lucho por Zamora</h1>
             <p className="mt-3 text-center text-lg font-semibold leading-6 text-white">Únete a nuestra campaña</p>
