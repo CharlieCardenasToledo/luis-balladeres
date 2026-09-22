@@ -213,7 +213,7 @@ export default function HomePage() {
         </p>
       </HomeSection>
 
-      <HomeSection title="Información para decidir" surface="wine" cta={
+      <HomeSection title="Información para decidir" surface="wine" pending={false} cta={
         <Link
           href="/redes"
           className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
