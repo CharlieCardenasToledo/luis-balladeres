@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PlaceholderNotice } from "@/components/ui/PlaceholderNotice";
-import { SourceNote, NotFoundList } from "@/components/ui/SourceNote";
+import { NotFoundList } from "@/components/ui/SourceNote";
 
 export const metadata: Metadata = {
   title: "Transparencia",
-  description: "Identidad electoral verificable de la candidatura de Luis Balladares y fuentes de las propuestas.",
+  description: "Identidad electoral y compromisos públicos de la candidatura de Luis Balladares.",
 };
 
 export default function Page() {
@@ -20,15 +20,9 @@ export default function Page() {
         agosto de 2026 y su notificación el 20 de agosto de 2026; el medio consultado señala
         ausencia de objeciones en el procedimiento correspondiente.
       </p>
-      <SourceNote
-        status="Verificado — medio"
-        sources={[{ label: "InfoZamora, 21 de agosto de 2026", url: "https://infozamoraec.com/index.php/2026/08/21/junta-provincial-electoral-califica-candidatura-de-luis-fernando-balladares-para-la-alcaldia-de-zamora/" }]}
-      />
-
       <h2 className="mt-8 font-display text-xl text-black">Trayectoria documentada</h2>
       <p className="mt-2 text-charcoal">
-        Cada cargo público mencionado en este sitio enlaza a un documento oficial o a una nota de
-        prensa identificable. Ver el detalle completo en{" "}
+        Conoce el detalle completo de la experiencia pública en{" "}
         <Link href="/trayectoria" className="underline">
           /trayectoria
         </Link>{" "}
@@ -37,16 +31,6 @@ export default function Page() {
           /documentos
         </Link>
         .
-      </p>
-
-      <h2 className="mt-8 font-display text-xl text-black">Fuentes de las propuestas</h2>
-      <p className="mt-2 text-charcoal">
-        Cada propuesta publicada en{" "}
-        <Link href="/propuestas" className="underline">
-          /propuestas
-        </Link>{" "}
-        indica si proviene de una declaración pública recogida por un medio o de un documento
-        oficial, junto con su fecha.
       </p>
 
       <h2 className="mt-8 font-display text-xl text-black">Responsable del sitio</h2>

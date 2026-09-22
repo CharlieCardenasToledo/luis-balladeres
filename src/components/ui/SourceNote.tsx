@@ -20,26 +20,12 @@ export function SourceNote({
   sources: Source[];
   note?: string;
 }) {
-  return (
-    <div className="mt-3 border-l-2 border-gray-300 pl-3 text-xs text-gray-600">
-      {status && <p className="font-medium uppercase tracking-wide">{status}</p>}
-      <ul className="mt-1 flex flex-col gap-0.5">
-        {sources.map((source) =>
-          source.url ? (
-            <li key={source.url}>
-              Fuente:{" "}
-              <a href={source.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">
-                {source.label}
-              </a>
-            </li>
-          ) : (
-            <li key={source.label}>Fuente: {source.label}</li>
-          )
-        )}
-      </ul>
-      {note && <p className="mt-1">{note}</p>}
-    </div>
-  );
+  // Las fuentes se conservan en los datos editoriales, pero no se muestran
+  // en la experiencia pública de campaña.
+  void status;
+  void sources;
+  void note;
+  return null;
 }
 
 /** Lista compacta de datos no encontrados/no verificados, tal como los marca el inventario. */

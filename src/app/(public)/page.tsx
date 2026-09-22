@@ -2,36 +2,27 @@ import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { HomeSection } from "@/components/home/HomeSection";
 
-const CANDIDATURA_FUENTE =
-  "https://infozamoraec.com/index.php/2026/08/21/junta-provincial-electoral-califica-candidatura-de-luis-fernando-balladares-para-la-alcaldia-de-zamora/";
-const PRIORIDADES_FUENTE =
-  "https://infozamoraec.com/index.php/2026/04/28/luis-balladarez-oficializa-su-candidatura-a-la-alcaldia-de-zamora-y-plantea-prioridades-para-el-canton/";
 
 const TRAYECTORIA_PREVIEW = [
   {
     date: "2006",
     role: "Gobernación / Intendencia / Jefatura Política de Zamora",
-    source: "La Hora",
   },
   {
     date: "2010–2019",
     role: "Secretario General del Gobierno Provincial de Zamora Chinchipe",
-    source: "Registro Oficial / ordenanzas provinciales",
   },
   {
     date: "2020–2023",
     role: "Secretario General del GAD Municipal de Zamora",
-    source: "documentación municipal",
   },
   {
     date: "2023–2024",
     role: "Prosecretario y luego Secretario General del Consejo Provincial de Zamora Chinchipe",
-    source: "directorio y ordenanzas provinciales",
   },
   {
     date: "2026",
     role: "Candidatura a la Alcaldía de Zamora — Fuerza Democrática, listas 2-4-12-21",
-    source: "InfoZamora",
   },
 ];
 
@@ -91,11 +82,7 @@ export default function HomePage() {
           para convertir una decisión en una obra y un servicio.
         </p>
         <p className="mt-3 text-xs leading-5 text-white/70">
-          Fuente:{" "}
-          <a href={CANDIDATURA_FUENTE} target="_blank" rel="noopener noreferrer" className="underline">
-            InfoZamora, 21 de agosto de 2026
-          </a>
-          . La candidatura está registrada por Fuerza Democrática, listas 2-4-12-21. La información
+          La candidatura está registrada por Fuerza Democrática, listas 2-4-12-21. La información
           personal no documentada no se presenta como hecho.
         </p>
       </HomeSection>
@@ -108,7 +95,7 @@ export default function HomePage() {
             href="/trayectoria"
             className="mt-4 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
           >
-            Ver experiencia y fuentes →
+            Ver experiencia →
           </Link>
         }
       >
@@ -117,7 +104,6 @@ export default function HomePage() {
             <li key={item.date}>
               <p className="text-sm font-medium text-gray-600">{item.date}</p>
               <p className="text-charcoal">{item.role}</p>
-              <p className="text-xs text-gray-600">Fuente: {item.source}</p>
             </li>
           ))}
         </ol>
@@ -152,11 +138,7 @@ export default function HomePage() {
           La matriz 2027–2031 organiza cinco ejes de trabajo: cuidado del territorio, economía
           local, bienestar, conectividad y un Municipio transparente. Las propuestas se presentan
           con su viabilidad y forma de ejecución; no sustituyen el Plan CNE hasta que ese documento
-          oficial esté disponible (
-          <a href={PRIORIDADES_FUENTE} target="_blank" rel="noopener noreferrer" className="underline">
-            InfoZamora, 28 de abril de 2026
-          </a>
-          ). El Plan de Trabajo oficial presentado al CNE no ha sido localizado públicamente
+          oficial esté disponible. El Plan de Trabajo oficial presentado al CNE no ha sido localizado públicamente
           todavía — consulta la{" "}
           <Link href="/plan-de-trabajo" className="underline">
             matriz completa
@@ -181,7 +163,6 @@ export default function HomePage() {
           Zamora no es una sola realidad. La ciudad y sus parroquias necesitan prioridades distintas,
           pero una misma forma de trabajar: escuchar, ordenar y volver público el avance.
         </p>
-        <p className="mt-2 text-xs text-gray-600">Fuente: INEC / Censo Ecuador 2022; GAD Municipal de Zamora.</p>
       </HomeSection>
 
       <HomeSection title="Tres compromisos para empezar" surface="wine" pending={false}>
@@ -218,13 +199,13 @@ export default function HomePage() {
           href="/redes"
           className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
         >
-          Ver fuentes y novedades →
+          Ver novedades →
         </Link>
       }>
         <p className="max-w-3xl text-lg leading-8 text-white">
-          Una decisión informada necesita propuestas claras, experiencia comprobable y fuentes
-          abiertas. Aquí puedes revisar la trayectoria, la matriz de propuestas y las novedades que
-          se vayan confirmando.
+          Una decisión informada necesita propuestas claras, experiencia comprobable y novedades
+          verificables. Aquí puedes revisar la trayectoria, la matriz de propuestas y la actualidad
+          de la campaña.
         </p>
       </HomeSection>
 

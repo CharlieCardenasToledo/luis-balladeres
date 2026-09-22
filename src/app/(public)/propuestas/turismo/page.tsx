@@ -32,17 +32,6 @@ export default function Page() {
             turismo comunitario. Este es contexto oficial del cantón, no una propuesta atribuible a
             Balladares.
           </p>
-          <p className="mt-2 text-xs">
-            Fuente:{" "}
-            <a
-              href="https://zamora.gob.ec/wp-content/uploads/2024/05/Propuesta-abril-2021-1.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              PDOT — GAD Municipal de Zamora
-            </a>
-          </p>
         </div>
       }
     />

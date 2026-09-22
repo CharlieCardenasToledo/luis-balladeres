@@ -93,9 +93,9 @@ export function Hero() {
           <Image src={logoLuchoBalladares} alt="" aria-hidden="true" className="h-auto w-48 sm:w-64" />
 
           <h1 className="font-display text-5xl uppercase leading-[0.95] tracking-tight text-white sm:text-6xl md:text-7xl">
-            Zamora
+            Yo lucho
             <br />
-            puede avanzar
+            por Zamora
           </h1>
 
           <p className="max-w-xl text-lg leading-7 text-white/90 sm:text-xl">

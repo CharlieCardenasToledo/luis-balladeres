@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Noticias",
-  description: "Hitos públicos de la candidatura de Luis Balladares, resumidos y con fuente.",
+  description: "Hitos públicos de la candidatura de Luis Balladares.",
 };
 
 type NewsItem = {
@@ -60,8 +60,7 @@ export default function Page() {
     <div className="container-editorial py-16">
       <h1 className="font-display text-3xl text-black sm:text-4xl">Noticias</h1>
       <p className="mt-4 text-sm text-gray-600">
-        Resúmenes propios de hitos públicos, atribuidos a su fuente — no se reproducen artículos
-        completos de terceros.
+        Resúmenes propios de hitos públicos de la campaña.
       </p>
 
       <ul className="mt-8 flex flex-col gap-8">
@@ -71,20 +70,6 @@ export default function Page() {
             <h2 className="mt-1 font-display text-xl text-black">{item.title}</h2>
             <p className="mt-2 text-charcoal">{item.summary}</p>
             {item.note && <p className="mt-2 text-sm text-gray-600">{item.note}</p>}
-            <ul className="mt-2 text-xs text-gray-600">
-              {item.sources.map((source) => (
-                <li key={source.label}>
-                  Fuente:{" "}
-                  {source.url ? (
-                    <a href={source.url} target="_blank" rel="noopener noreferrer" className="underline">
-                      {source.label}
-                    </a>
-                  ) : (
-                    source.label
-                  )}
-                </li>
-              ))}
-            </ul>
           </li>
         ))}
       </ul>
