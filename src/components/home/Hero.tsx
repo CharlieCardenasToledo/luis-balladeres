@@ -102,12 +102,8 @@ export function Hero() {
             <p className="text-center text-base font-semibold leading-6 text-white">para recibir información y actualizaciones</p>
             <div className="mt-6 grid gap-3">
               <input aria-label="Nombre" placeholder="Nombre*" className="h-16 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
-              <input aria-label="Correo electrónico" placeholder="Correo electrónico*" className="h-16 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
-              <input aria-label="Número" placeholder="Número" className="h-16 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
-              <div className="grid grid-cols-[1fr_1.2fr] gap-3">
-                <input aria-label="Código postal" placeholder="Código postal*" className="h-16 min-w-0 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
-                <Link href="/contacto" className="flex h-16 items-center justify-center bg-brand-wine px-3 text-center text-sm font-bold uppercase tracking-wide text-white">Únete a nosotros</Link>
-              </div>
+              <input aria-label="Número de teléfono" placeholder="Número de teléfono*" type="tel" className="h-16 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
+              <Link href="/contacto" className="flex h-16 items-center justify-center bg-brand-wine px-3 text-center text-sm font-bold uppercase tracking-wide text-white">Únete a nosotros</Link>
             </div>
             <p className="mt-4 text-sm italic leading-6 text-white/95">Comparte tus prioridades y recibe información de la campaña. Al continuar aceptas nuestra política de privacidad.</p>
           </div>
