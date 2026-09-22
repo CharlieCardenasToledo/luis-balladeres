@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PlaceholderNotice } from "@/components/ui/PlaceholderNotice";
 import { NotFoundList } from "@/components/ui/SourceNote";
 
 export const metadata: Metadata = {
@@ -31,11 +30,6 @@ export default function Page() {
           /documentos
         </Link>
         .
-      </p>
-
-      <h2 className="mt-8 font-display text-xl text-black">Responsable del sitio</h2>
-      <p className="mt-2">
-        <PlaceholderNotice label="Responsable legal y financiero de campaña pendiente de confirmación" />
       </p>
 
       <NotFoundList

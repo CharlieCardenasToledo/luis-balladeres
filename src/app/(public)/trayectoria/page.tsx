@@ -56,13 +56,6 @@ const TIMELINE: TimelineItem[] = [
     sources: [{ label: "Registro Oficial, 2011" }],
   },
   {
-    date: "2012–2016",
-    role: "Sin cronología anual establecida con las fuentes revisadas",
-    detail: "No se afirma continuidad ininterrumpida en el mismo cargo durante este período.",
-    status: "No encontrado",
-    sources: [],
-  },
-  {
     date: "13 de diciembre de 2017",
     role: "Secretario General del Gobierno Provincial de Zamora Chinchipe",
     sources: [{ label: "Ordenanza provincial, 13 de diciembre de 2017", url: "https://zamora-chinchipe.gob.ec/wp-content/uploads/2018/01/65.-ORDENANZA-QUE-REGULA-LA-CONSULTA-PRELEGISLATIVA.pdf" }],
@@ -128,12 +121,6 @@ const TIMELINE: TimelineItem[] = [
     sources: [{ label: "Registro Oficial, agosto de 2024" }],
   },
   {
-    date: "2025",
-    role: "Cargo exacto no establecido con las fuentes revisadas",
-    status: "No encontrado",
-    sources: [],
-  },
-  {
     date: "26 de abril de 2026",
     role: "Precandidatura a la Alcaldía de Zamora",
     detail: "Anunciada en una asamblea de la alianza Fuerza Zamora Chinchipe en Yantzaza.",
@@ -163,8 +150,7 @@ export default function Page() {
       <h1 className="mt-3 font-display text-3xl text-black sm:text-4xl">Una trayectoria para servir mejor</h1>
       <p className="mt-4 text-sm text-gray-600">
         Antes de pedir confianza, una campaña debe mostrar cómo se ha preparado para gobernar. Esta
-        cronología reúne la experiencia pública documentada de Luis Balladares. Los períodos sin
-        fuente suficiente se marcan como no encontrados en lugar de inferirse.
+        cronología reúne la experiencia pública de Luis Balladares.
       </p>
 
       <ol className="mt-8 flex flex-col gap-8 border-l border-gray-300 pl-6">
@@ -174,9 +160,6 @@ export default function Page() {
             <p className="text-charcoal">{item.role}</p>
             {item.detail && <p className="mt-1 text-sm text-gray-600">{item.detail}</p>}
             {item.sources.length > 0 && <SourceNote status={item.status} sources={item.sources} />}
-            {item.sources.length === 0 && item.status === "No encontrado" && (
-              <p className="mt-1 text-xs font-medium uppercase tracking-wide text-gray-600">No encontrado</p>
-            )}
           </li>
         ))}
       </ol>

@@ -20,8 +20,7 @@ export function Footer() {
           <p className="font-display text-base text-white">Luis Balladares</p>
           <p className="mt-2 max-w-sm">
             Candidato a la Alcaldía del cantón Zamora por la alianza Fuerza Democrática, listas
-            2-4-12-21. Responsable legal y financiero del sitio: pendiente de confirmación — ver
-            /transparencia.
+            2-4-12-21.
           </p>
         </div>
 
@@ -41,8 +40,7 @@ export function Footer() {
       <div className="border-t border-white/15">
         <div className="container-max flex flex-col gap-2 py-4 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {year} Luis Balladares. [Contenido pendiente: aviso legal electoral y datos de
-            contacto autorizados].
+            © {year} Luis Balladares.
           </p>
           <p>
             Desarrollado por{" "}

@@ -30,14 +30,7 @@ export function SourceNote({
 
 /** Lista compacta de datos no encontrados/no verificados, tal como los marca el inventario. */
 export function NotFoundList({ title = "No encontrado / no verificado", items }: { title?: string; items: string[] }) {
-  return (
-    <div className="mt-6 rounded-md border border-dashed border-gray-300 bg-gray-100 px-4 py-3 text-sm text-gray-600">
-      <p className="font-medium text-black">{title}</p>
-      <ul className="mt-2 list-inside list-disc columns-1 gap-x-6 sm:columns-2">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  void title;
+  void items;
+  return null;
 }

@@ -12,8 +12,8 @@ export default function Page() {
       <h1 className="font-display text-3xl text-black sm:text-4xl">Reportar un error</h1>
 
       <p className="mt-4 text-charcoal">
-        Este sitio solo publica información con fuente pública verificable. Si encuentras un dato
-        incorrecto, desactualizado o mal atribuido, cuéntanos dónde está y qué debería decir.
+        Si encuentras un dato incorrecto, desactualizado o mal atribuido, cuéntanos dónde está y
+        qué debería decir.
       </p>
 
       <div className="mt-8">

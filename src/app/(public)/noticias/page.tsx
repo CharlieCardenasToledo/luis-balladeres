@@ -46,13 +46,6 @@ const NEWS: NewsItem[] = [
       "La candidatura de Balladares a la Alcaldía de Zamora fue calificada por la alianza Fuerza Democrática, listas 2-4-12-21, sin objeciones reportadas dentro del proceso.",
     sources: [{ label: "InfoZamora, 21 de agosto de 2026", url: "https://infozamoraec.com/index.php/2026/08/21/junta-provincial-electoral-califica-candidatura-de-luis-fernando-balladares-para-la-alcaldia-de-zamora/" }],
   },
-  {
-    date: "15 de septiembre de 2026",
-    title: "Entrevista en RecTV Online",
-    summary: "Material de campaña anunció una entrevista al candidato a las 18:00.",
-    note: "No se cuenta con transcripción verificada del contenido de la entrevista; no se atribuyen declaraciones específicas de este video sin verificarlas.",
-    sources: [{ label: "Video, Facebook de RecTV Online", url: "https://www.facebook.com/RecTVonline/videos/1563347308253031/" }],
-  },
 ];
 
 export default function Page() {

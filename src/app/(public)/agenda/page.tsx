@@ -41,14 +41,6 @@ export default function Page() {
           </li>
         ))}
       </ul>
-
-      <div className="mt-8 rounded-md border border-dashed border-gray-300 bg-gray-100 px-4 py-3 text-sm text-gray-600">
-        <p className="font-medium text-black">Próximos eventos</p>
-        <p className="mt-1">
-          No se encontró una agenda pública futura verificable al corte del 17 de septiembre de
-          2026.
-        </p>
-      </div>
     </div>
   );
 }
