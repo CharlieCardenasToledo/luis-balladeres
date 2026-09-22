@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { PlaceholderNotice } from "@/components/ui/PlaceholderNotice";
 
+export function generateStaticParams() {
+  return [{ slug: "pendiente" }];
+}
+
 export async function generateMetadata({
   params,
 }: {
