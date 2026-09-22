@@ -137,9 +137,7 @@ export default function HomePage() {
         <p className="mt-5 max-w-4xl text-xs leading-5 text-white/70">
           La matriz 2027–2031 organiza cinco ejes de trabajo: cuidado del territorio, economía
           local, bienestar, conectividad y un Municipio transparente. Las propuestas se presentan
-          con su viabilidad y forma de ejecución; no sustituyen el Plan CNE hasta que ese documento
-          oficial esté disponible. El Plan de Trabajo oficial presentado al CNE no ha sido localizado públicamente
-          todavía — consulta la{" "}
+          con su viabilidad y forma de ejecución. Consulta la{" "}
           <Link href="/plan-de-trabajo" className="underline">
             matriz completa
           </Link>

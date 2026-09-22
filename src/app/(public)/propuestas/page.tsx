@@ -42,8 +42,7 @@ export default function Page() {
         <p className="font-medium text-black">El proyecto completo 2027–2031</p>
         <p className="mt-1 text-sm leading-6 text-gray-700">
           Cinco ejes para cuidar el territorio, mover la economía local, ampliar el bienestar,
-          conectar ciudad y parroquias y construir un Municipio transparente. Está organizada por
-          separado porque no sustituye el Plan de Trabajo oficial presentado al CNE.
+          conectar ciudad y parroquias y construir un Municipio transparente.
         </p>
         <Link href="/plan-de-trabajo" className="mt-3 inline-block font-medium text-brand-magenta underline">
           Consultar la matriz completa →

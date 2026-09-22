@@ -89,10 +89,9 @@ export default function Page() {
       <div className="mt-6 border-l-4 border-brand-magenta pl-4 text-sm text-gray-700">
         <p className="font-medium text-black">Alcance y cautela editorial</p>
         <p className="mt-1">
-          Este documento suministrado por el equipo no sustituye el Plan de Trabajo oficial presentado
-          al CNE, cuya copia pública verificable todavía no se ha localizado. Costos, metas físicas,
-          ubicaciones y cronogramas requieren estudios, presupuesto y validación jurídica antes de
-          presentarse como compromisos definitivos.
+          Esta matriz presenta prioridades y una ruta de trabajo. Costos, metas físicas, ubicaciones
+          y cronogramas se definirán con estudios, presupuesto y validación jurídica antes de cada
+          ejecución.
         </p>
       </div>
 
