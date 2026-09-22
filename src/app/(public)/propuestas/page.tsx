@@ -37,6 +37,18 @@ export default function Page() {
         ]}
       />
 
+      <div className="mt-6 rounded-md border border-brand-magenta/30 bg-brand-magenta/5 p-5">
+        <p className="font-medium text-black">Nueva matriz de trabajo 2027–2031</p>
+        <p className="mt-1 text-sm leading-6 text-gray-700">
+          El equipo entregó una matriz política y técnica con cinco ejes, propuestas priorizadas,
+          criterios de viabilidad y mensajes de campaña. Está organizada por separado porque no
+          sustituye el Plan de Trabajo oficial presentado al CNE.
+        </p>
+        <Link href="/plan-de-trabajo" className="mt-3 inline-block font-medium text-brand-magenta underline">
+          Consultar la matriz completa →
+        </Link>
+      </div>
+
       <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
         {CATEGORIES.map((category) => (
           <Link
