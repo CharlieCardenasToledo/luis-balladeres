@@ -56,6 +56,6 @@ test.describe("Navegación pública", () => {
   test("una parroquia real muestra su contexto y fuente", async ({ page }) => {
     await page.goto("/territorio/timbara");
     await expect(page.getByRole("heading", { level: 1, name: "Timbara" })).toBeVisible();
-    await expect(page.getByText(/No encontradas/i)).toBeVisible();
+    await expect(page.getByText("Prioridades decididas con su gente")).toBeVisible();
   });
 });

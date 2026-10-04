@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { SourceNote, NotFoundList } from "@/components/ui/SourceNote";
+import Link from "next/link";
+import { SourceNote } from "@/components/ui/SourceNote";
 import { PhotoGrid } from "@/components/ui/PhotoGrid";
 import { PHOTOS } from "@/lib/campaign-photos";
 import luisRetrato from "../../../../public/media/luis-retrato.png";
@@ -63,19 +64,12 @@ export default function Page() {
         note="Ver la cronología completa, con cada fuente individual, en /trayectoria."
       />
 
-      <NotFoundList
-        title="Datos personales no encontrados públicamente"
-        items={[
-          "fecha de nacimiento",
-          "edad",
-          "lugar de nacimiento",
-          "nombres de padres",
-          "estado civil",
-          "cónyuge / hijos",
-          "educación primaria y secundaria",
-          "relato autobiográfico o motivaciones personales",
-        ]}
-      />
+      <Link
+        href="/trayectoria"
+        className="mt-8 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
+      >
+        Ver su trayectoria completa →
+      </Link>
     </div>
   );
 }

@@ -27,10 +27,3 @@ export function SourceNote({
   void note;
   return null;
 }
-
-/** Lista compacta de datos no encontrados/no verificados, tal como los marca el inventario. */
-export function NotFoundList({ title = "No encontrado / no verificado", items }: { title?: string; items: string[] }) {
-  void title;
-  void items;
-  return null;
-}

@@ -45,7 +45,7 @@ export default async function ParroquiaPage({
       <p className="mt-1 text-sm uppercase tracking-wide text-gray-600">Parroquia {territory.type}</p>
 
       <p className="mt-6 text-charcoal">{territory.context}</p>
-      <SourceNote status="Contexto oficial — no es propuesta del candidato" sources={territory.sources} />
+      <SourceNote sources={territory.sources} />
 
       {photos && (
         <section className="mt-8">
@@ -53,19 +53,24 @@ export default async function ParroquiaPage({
           <div className="mt-4">
             <PhotoGrid columns={photos.length > 1 ? 3 : 2} photos={photos} />
           </div>
-          <SourceNote status="Material de campaña" sources={[CAMPAIGN_PHOTOS_SOURCE]} />
+          <SourceNote sources={[CAMPAIGN_PHOTOS_SOURCE]} />
         </section>
       )}
 
-      <div className="mt-6 rounded-md border border-dashed border-gray-300 bg-gray-100 px-4 py-3 text-sm text-gray-600">
-        <p className="font-medium text-black">Propuestas específicas de Balladares para {territory.name}</p>
-        <p className="mt-1">
-          No encontradas. Ver la declaración general sobre atención diferenciada por parroquia en{" "}
-          <Link href="/propuestas/parroquias" className="underline">
-            /propuestas/parroquias
-          </Link>
-          .
+      <div className="mt-8 rounded-md border border-brand-magenta/30 bg-brand-magenta/5 p-5">
+        <p className="font-medium text-black">Prioridades decididas con su gente</p>
+        <p className="mt-1 text-sm leading-6 text-gray-700">
+          Cada parroquia tiene una realidad distinta. Las prioridades para {territory.name} se
+          definirán junto a sus habitantes, con presupuesto participativo y seguimiento público.
         </p>
+        <div className="mt-3 flex flex-wrap gap-4 text-sm font-medium">
+          <Link href="/propuestas/parroquias" className="text-brand-magenta underline-offset-4 hover:underline">
+            Ver la propuesta para las parroquias →
+          </Link>
+          <Link href="/contacto" className="text-brand-magenta underline-offset-4 hover:underline">
+            Cuéntanos qué necesita tu parroquia →
+          </Link>
+        </div>
       </div>
     </div>
   );

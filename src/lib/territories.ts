@@ -1,9 +1,4 @@
-/**
- * Datos de las parroquias del cantón Zamora.
- * Fuente: inventario_contenidos_web_luis_balladares_17sep2026.md, secciones 15-23.
- * El contexto de ordenamiento territorial (PDOT) describe al cantón, NO son
- * propuestas del candidato — se etiqueta así explícitamente en cada página.
- */
+/** Parroquias del cantón Zamora; las fuentes se conservan en `sources`. */
 
 const PDOT_URL = "https://zamora.gob.ec/wp-content/uploads/2024/05/Propuesta-abril-2021-1.pdf";
 const PARROQUIAS_URL = "https://zamora.gob.ec/ciudad/parroquias-de-zamora/";
@@ -22,7 +17,7 @@ export const TERRITORIES: Territory[] = [
     name: "Zamora",
     type: "urbana",
     context:
-      "Cabecera cantonal. El documento de ordenamiento territorial la describe como nodo de administración, gestión e intercambio, y como centro de servicios y comercialización.",
+      "Cabecera cantonal y principal centro de administración, servicios y comercio del cantón.",
     sources: [
       { label: "GAD Municipal de Zamora — parroquias", url: PARROQUIAS_URL },
       { label: "PDOT — GAD Municipal de Zamora", url: PDOT_URL },
@@ -33,7 +28,7 @@ export const TERRITORIES: Territory[] = [
     name: "El Limón",
     type: "urbana",
     context:
-      "El GAD Municipal la clasifica como parroquia urbana. No se recopiló información oficial adicional suficiente en esta investigación para un perfil más extenso.",
+      "Parroquia urbana del cantón Zamora, parte de una ciudad que crece y necesita servicios, movilidad y espacios públicos de calidad.",
     sources: [{ label: "GAD Municipal de Zamora — parroquias", url: PARROQUIAS_URL }],
   },
   {
@@ -41,7 +36,7 @@ export const TERRITORIES: Territory[] = [
     name: "Cumbaratza",
     type: "rural",
     context:
-      "El PDOT la agrupa junto con Guadalupe y Timbara en un rol de producción sostenible y turismo cultural. El mismo documento indica que el aeropuerto del cantón se emplaza en esta parroquia.",
+      "Parroquia rural con vocación de producción sostenible y turismo cultural. En su territorio se encuentra el aeropuerto del cantón.",
     sources: [
       { label: "GAD Municipal de Zamora — parroquias", url: PARROQUIAS_URL },
       { label: "PDOT — GAD Municipal de Zamora", url: PDOT_URL },
@@ -52,7 +47,7 @@ export const TERRITORIES: Territory[] = [
     name: "Guadalupe",
     type: "rural",
     context:
-      "El PDOT la agrupa con Cumbaratza y Timbara en producción sostenible y turismo cultural, y menciona el río Yacuambi en relación con zonas de protección/riesgo hídrico en esta parroquia.",
+      "Parroquia rural con vocación de producción sostenible y turismo cultural, junto al río Yacuambi, cuyas riberas requieren protección.",
     sources: [{ label: "PDOT — GAD Municipal de Zamora", url: PDOT_URL }],
   },
   {
@@ -60,7 +55,7 @@ export const TERRITORIES: Territory[] = [
     name: "Imbana",
     type: "rural",
     context:
-      "En documentación municipal aparece también como La Victoria de Imbana. El PDOT la agrupa con Sabanilla y San Carlos de las Minas en producción pecuaria, piscícola y turismo comunitario.",
+      "Parroquia rural, también conocida como La Victoria de Imbana, con vocación pecuaria, piscícola y de turismo comunitario.",
     sources: [
       { label: "GAD Municipal de Zamora — parroquias", url: PARROQUIAS_URL },
       { label: "PDOT — GAD Municipal de Zamora", url: PDOT_URL },
@@ -71,7 +66,7 @@ export const TERRITORIES: Territory[] = [
     name: "Sabanilla",
     type: "rural",
     context:
-      "El PDOT la agrupa junto con Imbana y San Carlos de las Minas para producción pecuaria, piscícola y turismo comunitario.",
+      "Parroquia rural con vocación pecuaria, piscícola y de turismo comunitario.",
     sources: [{ label: "PDOT — GAD Municipal de Zamora", url: PDOT_URL }],
   },
   {
@@ -79,7 +74,7 @@ export const TERRITORIES: Territory[] = [
     name: "San Carlos de las Minas",
     type: "rural",
     context:
-      "El GAD Municipal simplifica el nombre a \"San Carlos\" en su página de parroquias; el PDOT usa \"San Carlos de las Minas\". Agrupada con Sabanilla e Imbana en producción pecuaria, piscícola y turismo comunitario.",
+      "Parroquia rural, conocida también como San Carlos, con vocación pecuaria, piscícola y de turismo comunitario.",
     sources: [
       { label: "GAD Municipal de Zamora — parroquias", url: PARROQUIAS_URL },
       { label: "PDOT — GAD Municipal de Zamora", url: PDOT_URL },
@@ -90,7 +85,7 @@ export const TERRITORIES: Territory[] = [
     name: "Timbara",
     type: "rural",
     context:
-      "El PDOT la agrupa con Guadalupe y Cumbaratza en producción sostenible y turismo cultural. El 18 de agosto de 2026, en el sector Buenaventura de esta parroquia, se realizó el acto de presentación de candidaturas de Alianza Fuerza.",
+      "Parroquia rural con vocación de producción sostenible y turismo cultural. En su sector Buenaventura, el 18 de agosto de 2026, se presentaron las candidaturas de Alianza Fuerza.",
     sources: [
       { label: "GAD Municipal de Zamora — parroquias", url: PARROQUIAS_URL },
       { label: "PDOT — GAD Municipal de Zamora", url: PDOT_URL },

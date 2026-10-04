@@ -63,17 +63,14 @@ export default function Page() {
           ]}
         />
       </div>
-      <SourceNote status="Material de campaña" sources={[CAMPAIGN_PHOTOS_SOURCE]} />
+      <SourceNote sources={[CAMPAIGN_PHOTOS_SOURCE]} />
 
-      <p className="mt-8 text-sm text-gray-600">
-        El contexto de ordenamiento territorial (PDOT) describe roles productivos y de servicios
-        del cantón; es información oficial municipal, no propuestas del candidato. No se
-        encontraron propuestas de Balladares específicas para cada parroquia — ver{" "}
-        <Link href="/propuestas/parroquias" className="underline">
-          /propuestas/parroquias
-        </Link>
-        .
-      </p>
+      <Link
+        href="/propuestas/parroquias"
+        className="mt-8 inline-block font-medium text-brand-magenta underline-offset-4 hover:underline"
+      >
+        Conoce la propuesta para las parroquias →
+      </Link>
     </div>
   );
 }

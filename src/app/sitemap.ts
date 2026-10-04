@@ -31,7 +31,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/noticias",
     "/redes",
     "/agenda",
-    "/documentos",
     "/plan-de-trabajo",
     "/contacto",
     "/reportar-error",

@@ -3,36 +3,21 @@ import { ProposalDetail } from "@/components/proposals/ProposalDetail";
 
 export const metadata: Metadata = {
   title: "Turismo",
-  description: "Impulso al turismo, declarado por Luis Balladares entre sus prioridades.",
+  description: "Turismo, mercados y oportunidades para emprender en Zamora.",
 };
 
 export default function Page() {
   return (
     <ProposalDetail
       title="Turismo"
-      content="Balladares incluyó el impulso al turismo entre sus prioridades públicas."
-      sourceStatus="Verificado — declaración recogida por medio"
+      content="Zamora tiene naturaleza, cultura e identidad para convertirse en destino. Impulsar el turismo significa más oportunidades para emprendedores, comerciantes y parroquias."
       sources={[{ label: "InfoZamora, 28 de abril de 2026", url: "https://infozamoraec.com/index.php/2026/04/28/luis-balladarez-oficializa-su-candidatura-a-la-alcaldia-de-zamora-y-plantea-prioridades-para-el-canton/" }]}
-      notFoundItems={[
-        "rutas turísticas concretas",
-        "sitios/cascadas priorizados",
-        "marca turística y plan de promoción",
-        "presupuesto y capacitación",
-        "infraestructura específica",
-        "metas de visitantes",
-        "convenios y cronograma",
-      ]}
+      related={["Plan cantonal de turismo y cartera de productos","Parque Turístico Temático de naturaleza e identidad","Mercados, ferias y espacios de comercialización"]}
       extra={
-        <div className="mt-6 rounded-md border border-gray-300 bg-gray-100 px-4 py-3 text-sm text-gray-600">
-          <p className="font-medium text-black">Contexto territorial (no es una propuesta del candidato)</p>
-          <p className="mt-2">
-            El Plan de Desarrollo y Ordenamiento Territorial municipal identifica a Guadalupe,
-            Cumbaratza y Timbara con un rol asociado a producción sostenible y turismo cultural, y
-            a Sabanilla, Imbana y San Carlos de las Minas con producción pecuaria/piscícola y
-            turismo comunitario. Este es contexto oficial del cantón, no una propuesta atribuible a
-            Balladares.
-          </p>
-        </div>
+        <p className="mt-4 text-charcoal">
+          Guadalupe, Cumbaratza y Timbara tienen vocación de producción sostenible y turismo
+          cultural; Sabanilla, Imbana y San Carlos de las Minas, de turismo comunitario.
+        </p>
       }
     />
   );

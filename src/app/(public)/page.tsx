@@ -42,9 +42,9 @@ const EJES_PREVIEW = [
 ];
 
 const NOTICIAS_PREVIEW = [
-  { date: "28 abr 2026", title: "Oficializa precandidatura y plantea prioridades para el cantón" },
-  { date: "19 ago 2026", title: "Alianza Fuerza presenta candidaturas para las elecciones 2027" },
-  { date: "21 ago 2026", title: "Junta Provincial Electoral califica su candidatura a la Alcaldía" },
+  { date: "26 abr 2026", title: "Anuncia su precandidatura y sus prioridades para el cantón" },
+  { date: "18 ago 2026", title: "Alianza Fuerza presenta sus candidaturas para las elecciones 2027" },
+  { date: "Ago 2026", title: "La Junta Provincial Electoral califica su candidatura a la Alcaldía" },
 ];
 
 /**
@@ -136,10 +136,9 @@ export default function HomePage() {
           ))}
         </div>
         <p className="mt-5 max-w-4xl text-xs leading-5 text-white/70">
-          La matriz 2027–2031 organiza cinco ejes de trabajo: cuidado del territorio, economía
-          local, bienestar, conectividad y un Municipio transparente. Las propuestas se presentan
-          con su viabilidad y forma de ejecución. Toda la información está organizada en la sección
-          de propuestas.
+          El plan de trabajo 2027–2031 organiza cinco ejes: cuidado del territorio, economía
+          local, bienestar, conectividad y un Municipio transparente. Cada propuesta explica qué se
+          quiere lograr y cómo se llevará a cabo.
         </p>
       </HomeSection>
 
@@ -208,9 +207,9 @@ export default function HomePage() {
         </Link>
       }>
         <p className="max-w-3xl text-lg leading-8 text-white">
-          Una decisión informada necesita propuestas claras, experiencia comprobable y novedades
-          claras. Aquí puedes revisar la trayectoria, la matriz de propuestas y la actualidad
-          de la campaña.
+          Una decisión informada necesita propuestas claras, experiencia comprobable y novedades al
+          día. Aquí puedes revisar la trayectoria, el plan de trabajo y la actualidad de la
+          campaña.
         </p>
       </HomeSection>
 

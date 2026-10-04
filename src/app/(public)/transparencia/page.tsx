@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { NotFoundList } from "@/components/ui/SourceNote";
 
 export const metadata: Metadata = {
   title: "Transparencia",
@@ -14,33 +13,23 @@ export default function Page() {
 
       <h2 className="mt-8 font-display text-xl text-black">Identidad electoral</h2>
       <p className="mt-2 text-charcoal">
-        Luis Fernando Balladares Villavicencio, candidato a la Alcaldía de Zamora por la alianza
-        Fuerza Democrática, listas 2-4-12-21. La resolución de calificación fue reportada el 19 de
-        agosto de 2026 y su notificación el 20 de agosto de 2026; el medio consultado señala
-        ausencia de objeciones en el procedimiento correspondiente.
-      </p>
-      <h2 className="mt-8 font-display text-xl text-black">Trayectoria</h2>
-      <p className="mt-2 text-charcoal">
-        Conoce el detalle completo de la experiencia pública en{" "}
-        <Link href="/trayectoria" className="underline">
-          /trayectoria
-        </Link>{" "}
-        .
+        Luis Fernando Balladares Villavicencio es candidato a la Alcaldía de Zamora por Fuerza
+        Democrática, listas 2-4-12-21. Su candidatura fue calificada por la Junta Provincial
+        Electoral en agosto de 2026, sin objeciones.
       </p>
 
-      <NotFoundList
-        title="No encontrado para transparencia"
-        items={[
-          "Plan de Trabajo oficial descargable",
-          "resolución electoral original en PDF del CNE específica del candidato",
-          "composición exacta de organizaciones de la alianza registrada",
-          "responsable legal del sitio",
-          "responsable financiero/electoral de la campaña",
-          "reportes de ingresos/gastos de campaña",
-          "contratos de pauta publicitaria",
-          "registro de cambios del plan de trabajo",
-        ]}
-      />
+      <h2 className="mt-8 font-display text-xl text-black">Trayectoria y plan de trabajo</h2>
+      <p className="mt-2 text-charcoal">
+        Conoce su{" "}
+        <Link href="/trayectoria" className="text-brand-magenta underline underline-offset-4">
+          experiencia pública
+        </Link>{" "}
+        y el{" "}
+        <Link href="/plan-de-trabajo" className="text-brand-magenta underline underline-offset-4">
+          plan de trabajo 2027–2031
+        </Link>
+        .
+      </p>
     </div>
   );
 }
