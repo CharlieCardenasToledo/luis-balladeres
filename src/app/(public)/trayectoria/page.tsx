@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SourceNote } from "@/components/ui/SourceNote";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/trayectoria" },
   title: "Trayectoria",
   description: "La experiencia pública que Luis Balladares pone al servicio de Zamora.",
 };

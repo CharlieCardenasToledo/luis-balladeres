@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProposalDetail } from "@/components/proposals/ProposalDetail";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/propuestas/gestion-municipal" },
   title: "Gestión municipal",
   description: "Un Municipio coordinado, digital y transparente.",
 };

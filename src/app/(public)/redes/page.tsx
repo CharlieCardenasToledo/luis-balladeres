@@ -3,6 +3,7 @@ import { PhotoGrid } from "@/components/ui/PhotoGrid";
 import { CAMPAIGN_PHOTOS_SOURCE, PHOTOS } from "@/lib/campaign-photos";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/redes" },
   title: "Redes",
   description: "Canales de campaña de Luis Balladares.",
 };

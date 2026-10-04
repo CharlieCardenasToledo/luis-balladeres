@@ -4,6 +4,7 @@ import { PhotoGrid } from "@/components/ui/PhotoGrid";
 import { PHOTOS, type CampaignPhoto } from "@/lib/campaign-photos";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/noticias" },
   title: "Noticias",
   description: "Hitos públicos de la candidatura de Luis Balladares.",
 };

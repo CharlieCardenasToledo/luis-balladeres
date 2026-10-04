@@ -5,16 +5,29 @@ export const dynamic = "force-static";
 
 const siteUrl = getSiteUrl();
 
-/**
- * Excluye /admin y /api del rastreo (plan, sección 29).
- */
+// Una campaña quiere ser encontrada: se permite explícitamente a buscadores y
+// asistentes de IA leer el sitio público.
+const AI_CRAWLERS = [
+  "GPTBot",
+  "OAI-SearchBot",
+  "ChatGPT-User",
+  "ClaudeBot",
+  "Claude-SearchBot",
+  "Claude-User",
+  "PerplexityBot",
+  "Perplexity-User",
+  "Google-Extended",
+  "Applebot-Extended",
+  "Meta-ExternalAgent",
+];
+
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: ["/admin", "/admin/", "/api", "/api/"],
-    },
+    rules: [
+      { userAgent: "*", allow: "/", disallow: ["/api/"] },
+      { userAgent: AI_CRAWLERS, allow: "/", disallow: ["/api/"] },
+    ],
     sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }

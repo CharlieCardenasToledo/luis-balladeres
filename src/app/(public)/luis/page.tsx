@@ -7,6 +7,7 @@ import { PHOTOS } from "@/lib/campaign-photos";
 import luisRetrato from "../../../../public/media/luis-retrato.png";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/luis" },
   title: "Luis",
   description:
     "Conoce a Luis Balladares, su experiencia pública y la forma de trabajar que propone para Zamora.",

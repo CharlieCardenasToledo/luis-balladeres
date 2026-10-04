@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProposalDetail } from "@/components/proposals/ProposalDetail";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/propuestas/turismo" },
   title: "Turismo",
   description: "Turismo, mercados y oportunidades para emprender en Zamora.",
 };

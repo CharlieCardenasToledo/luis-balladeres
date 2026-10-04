@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
+  alternates: { canonical: "/accesibilidad" },
   title: "Accesibilidad",
   description: "Compromiso de accesibilidad del sitio de campaña.",
 };
@@ -15,7 +16,7 @@ export default function Page() {
         <li>El contenido se adapta a pantallas móviles.</li>
         <li>Las imágenes informativas incluyen texto alternativo.</li>
       </ul>
-      <p className="mt-6 text-charcoal">Si encuentras una barrera de acceso, puedes reportarla desde el formulario de contacto.</p>
+      <p className="mt-6 text-charcoal">Si encuentras una barrera de acceso, avísanos en el grupo de WhatsApp de la campaña.</p>
     </div>
   );
 }

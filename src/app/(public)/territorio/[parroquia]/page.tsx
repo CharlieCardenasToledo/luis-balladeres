@@ -5,6 +5,7 @@ import { SourceNote } from "@/components/ui/SourceNote";
 import { TERRITORIES, getTerritory } from "@/lib/territories";
 import { PhotoGrid } from "@/components/ui/PhotoGrid";
 import { CAMPAIGN_PHOTOS_SOURCE, TERRITORY_PHOTOS } from "@/lib/campaign-photos";
+import { WHATSAPP_GROUP_URL } from "@/lib/site";
 
 export function generateStaticParams() {
   return TERRITORIES.map((t) => ({ parroquia: t.slug }));
@@ -18,6 +19,7 @@ export async function generateMetadata({
   const { parroquia } = await params;
   const territory = getTerritory(parroquia);
   return {
+    alternates: { canonical: `/territorio/${parroquia}` },
     title: territory?.name ?? parroquia,
     description: territory
       ? `Parroquia ${territory.type} de Zamora: ${territory.name}.`
@@ -67,9 +69,14 @@ export default async function ParroquiaPage({
           <Link href="/propuestas/parroquias" className="text-brand-magenta underline-offset-4 hover:underline">
             Ver la propuesta para las parroquias →
           </Link>
-          <Link href="/contacto" className="text-brand-magenta underline-offset-4 hover:underline">
+          <a
+            href={WHATSAPP_GROUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-magenta underline-offset-4 hover:underline"
+          >
             Cuéntanos qué necesita tu parroquia →
-          </Link>
+          </a>
         </div>
       </div>
     </div>

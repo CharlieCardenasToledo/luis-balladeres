@@ -37,7 +37,7 @@ test.describe("Navegación pública", () => {
       ["Propuestas", "/propuestas", "Una Zamora que avanza"],
       ["Zamora", "/territorio", "Territorio"],
       ["Noticias", "/noticias", "Noticias"],
-      ["Contacto", "/contacto", "Contacto"],
+      ["Contacto", "/contacto", "Súmate a la campaña"],
     ] as const) {
       test(`navega a ${path} desde el menú`, async ({ page }) => {
         await page.goto("/trayectoria"); // página con header siempre visible, sin ambigüedad de duplicados

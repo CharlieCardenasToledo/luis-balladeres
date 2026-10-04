@@ -146,12 +146,14 @@ export function Hero() {
             >
               Conoce el proyecto
             </Link>
-            <Link
-              href="/contacto"
+            <a
+              href={WHATSAPP_GROUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex min-h-11 items-center justify-center rounded-md border border-white/50 px-6 text-base font-medium text-white hover:border-white"
             >
               Súmate a la campaña
-            </Link>
+            </a>
           </div>
 
           <p className="max-w-lg text-xs leading-5 text-white/65">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProposalDetail } from "@/components/proposals/ProposalDetail";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/propuestas/educacion" },
   title: "Educación",
   description: "Infraestructura educativa y apoyos focalizados para estudiantes.",
 };

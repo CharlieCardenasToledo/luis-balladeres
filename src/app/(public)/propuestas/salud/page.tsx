@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProposalDetail } from "@/components/proposals/ProposalDetail";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/propuestas/salud" },
   title: "Salud",
   description: "Articulación institucional y gestión de un nuevo hospital para Zamora.",
 };

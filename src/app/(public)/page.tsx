@@ -1,9 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { HomeSection } from "@/components/home/HomeSection";
 import { PhotoGrid } from "@/components/ui/PhotoGrid";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { PHOTOS } from "@/lib/campaign-photos";
 
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const TRAYECTORIA_PREVIEW = [
   {
@@ -182,12 +187,7 @@ export default function HomePage() {
       </HomeSection>
 
       <HomeSection title="Participa en la campaña" surface="magenta" pending={false} cta={
-        <Link
-          href="/contacto"
-          className="mt-5 inline-flex min-h-11 items-center rounded-md border border-white/50 px-5 font-medium text-white hover:border-white hover:bg-white hover:text-brand-wine"
-        >
-          Quiero participar →
-        </Link>
+        <WhatsAppButton variant="outline" label="Quiero participar" className="mt-5" />
       }>
         <p className="max-w-3xl text-lg leading-8 text-white">
           La campaña se construye conversando con la gente de Zamora. Comparte tus prioridades,
@@ -236,16 +236,11 @@ export default function HomePage() {
       </HomeSection>
 
       <HomeSection title="Da el siguiente paso" editorial surface="magenta" pending={false} cta={
-        <Link
-          href="/contacto"
-          className="mt-5 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
-        >
-          Súmate a la campaña →
-        </Link>
+        <WhatsAppButton variant="light" label="Únete al grupo de WhatsApp" className="mt-5" />
       }>
         <p className="text-lg leading-8 text-white">
-          Comparte qué necesita tu barrio o parroquia. El formulario es el canal para escuchar
-          prioridades y mantener abierta la conversación con la campaña.
+          Comparte qué necesita tu barrio o parroquia. En el grupo de WhatsApp de la campaña
+          escuchamos tus prioridades y te mantenemos al tanto de las actividades.
         </p>
       </HomeSection>
     </>

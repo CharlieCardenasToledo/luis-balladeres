@@ -6,6 +6,7 @@ import { AXES, VISION } from "@/lib/plan-trabajo";
 import { PROPOSAL_TOPICS } from "@/lib/proposal-topics";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/propuestas" },
   title: "Propuestas",
   description: "El proyecto de Luis Balladares para una Zamora con servicios, oportunidades y participación.",
 };

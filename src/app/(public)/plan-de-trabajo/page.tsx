@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { PHOTOS } from "@/lib/campaign-photos";
 import {
   AXES,
@@ -15,6 +15,7 @@ import {
 } from "@/lib/plan-trabajo";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/plan-de-trabajo" },
   title: "Plan de trabajo 2027–2031",
   description:
     "El plan de Luis Balladares para la Alcaldía de Zamora 2027–2031: visión, cinco ejes, propuestas, cronograma y participación ciudadana.",
@@ -219,12 +220,7 @@ export default function Page() {
           <blockquote className="mt-6 text-xl leading-9 text-white/95">“{COMMITMENT}”</blockquote>
           <p className="mt-4 font-medium">Luis Fernando Balladares Villavicencio</p>
           <p className="text-sm text-white/75">Candidato a la Alcaldía de Zamora · Fuerza Democrática, listas 2-4-12-21</p>
-          <Link
-            href="/contacto"
-            className="mt-8 inline-flex min-h-11 items-center rounded-md bg-white px-5 font-medium text-brand-wine hover:bg-off-white"
-          >
-            Comparte tus prioridades →
-          </Link>
+          <WhatsAppButton variant="light" label="Comparte tus prioridades" className="mt-8" />
         </div>
       </section>
     </>

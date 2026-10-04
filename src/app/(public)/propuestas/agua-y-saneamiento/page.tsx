@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProposalDetail } from "@/components/proposals/ProposalDetail";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/propuestas/agua-y-saneamiento" },
   title: "Agua y saneamiento",
   description: "Agua potable, alcantarillado y saneamiento para Zamora y sus parroquias.",
 };

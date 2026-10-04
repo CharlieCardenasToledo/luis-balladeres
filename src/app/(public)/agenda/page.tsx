@@ -4,6 +4,7 @@ import { SourceNote } from "@/components/ui/SourceNote";
 import { CAMPAIGN_PHOTOS_SOURCE, PHOTOS, type CampaignPhoto } from "@/lib/campaign-photos";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/agenda" },
   title: "Agenda",
   description: "Eventos públicos de la campaña de Luis Balladares.",
 };

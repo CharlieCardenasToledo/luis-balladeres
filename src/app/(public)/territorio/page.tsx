@@ -6,6 +6,7 @@ import { PhotoGrid } from "@/components/ui/PhotoGrid";
 import { CAMPAIGN_PHOTOS_SOURCE, PHOTOS } from "@/lib/campaign-photos";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/territorio" },
   title: "Territorio",
   description: "El cantón Zamora: población, parroquias y contexto territorial oficial.",
 };

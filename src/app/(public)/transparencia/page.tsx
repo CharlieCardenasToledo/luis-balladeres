@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/transparencia" },
   title: "Transparencia",
   description: "Identidad electoral y compromisos públicos de la candidatura de Luis Balladares.",
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProposalDetail } from "@/components/proposals/ProposalDetail";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/propuestas/parroquias" },
   title: "Parroquias",
   description: "Atención diferenciada para cada parroquia del cantón Zamora.",
 };

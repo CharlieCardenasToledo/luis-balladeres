@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProposalDetail } from "@/components/proposals/ProposalDetail";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/propuestas/ciudad-y-urbanismo" },
   title: "Ciudad y urbanismo",
   description: "Regeneración urbana, espacios públicos y movilidad segura para Zamora.",
 };
