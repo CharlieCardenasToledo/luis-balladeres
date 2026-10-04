@@ -99,6 +99,41 @@ const TIMELINE: TimelineItem[] = [
   },
 ];
 
+const PROFILE: { title: string; items: string[] }[] = [
+  {
+    title: "Formación",
+    items: [
+      "Licenciado en Ciencias Sociales, Políticas y Económicas",
+      "Abogado",
+      "Doctor en Jurisprudencia, Universidad Nacional de Loja",
+    ],
+  },
+  {
+    title: "Servicio público",
+    items: [
+      "Intendente de Policía",
+      "Jefe Político del cantón Zamora",
+      "Procurador Síndico",
+      "Secretario General en alcaldías y en la Prefectura",
+    ],
+  },
+  {
+    title: "Experiencia",
+    items: [
+      "Consejo Nacional Electoral (CNE)",
+      "Ministerio de Inclusión Económica y Social (MIES)",
+      "Asamblea Nacional",
+      "Asesor jurídico de organizaciones privadas",
+      "Promotor cultural",
+    ],
+  },
+];
+
+const PROFILE_SOURCE = {
+  label: "Publicación \"Soy Lucho Balladares\", página oficial de Facebook",
+  url: "https://www.facebook.com/photo/?fbid=122211526700957388",
+};
+
 export default function Page() {
   return (
     <div className="container-editorial py-16">
@@ -120,6 +155,22 @@ export default function Page() {
         ))}
       </ol>
 
+      <section className="mt-14">
+        <h2 className="font-display text-2xl text-black">Formación y experiencia</h2>
+        <div className="mt-6 grid gap-5 sm:grid-cols-3">
+          {PROFILE.map((group) => (
+            <div key={group.title} className="rounded-lg border border-gray-200 bg-white p-5">
+              <h3 className="font-medium text-brand-magenta">{group.title}</h3>
+              <ul className="mt-3 flex flex-col gap-2 text-sm leading-6 text-charcoal">
+                {group.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <SourceNote status="Material de campaña" sources={[PROFILE_SOURCE]} />
+      </section>
     </div>
   );
 }

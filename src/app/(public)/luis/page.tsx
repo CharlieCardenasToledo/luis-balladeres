@@ -44,8 +44,10 @@ export default function Page() {
         prioridades y rinda cuentas de cada avance.
       </p>
       <p className="mt-4 text-charcoal">
-        Cursó Derecho en la Universidad Nacional de Loja y ha desarrollado su carrera al servicio
-        de instituciones públicas de Zamora Chinchipe.
+        Es abogado y doctor en Jurisprudencia por la Universidad Nacional de Loja, y licenciado en
+        Ciencias Sociales, Políticas y Económicas. Ha trabajado en el CNE, el MIES y la Asamblea
+        Nacional, y ha desarrollado su carrera al servicio de instituciones públicas de Zamora
+        Chinchipe.
       </p>
       <SourceNote status="Verificado — fuente universitaria" sources={FUENTES_FORMACION} />
 

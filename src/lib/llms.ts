@@ -7,7 +7,9 @@ const SUMMARY =
   "Sitio oficial de campaña de Luis Fernando Balladares Villavicencio (Lucho Balladares), candidato a la Alcaldía del cantón Zamora, provincia de Zamora Chinchipe, Ecuador, para el período 2027–2031, por Fuerza Democrática, listas 2-4-12-21 (Alianza Fuerza). Su candidatura fue calificada por la Junta Provincial Electoral en agosto de 2026.";
 
 const PROFILE = [
-  "Abogado graduado en la Universidad Nacional de Loja (2007).",
+  "Abogado y doctor en Jurisprudencia por la Universidad Nacional de Loja (graduado en Derecho en 2007); licenciado en Ciencias Sociales, Políticas y Económicas.",
+  "Experiencia en el Consejo Nacional Electoral (CNE), el Ministerio de Inclusión Económica y Social (MIES) y la Asamblea Nacional; asesor jurídico de organizaciones privadas y promotor cultural.",
+  "Ha sido Procurador Síndico y Secretario General en alcaldías y en la Prefectura.",
   "2006: Gobernador encargado, Intendente y Jefe Político del cantón Zamora.",
   "2010–2019: Secretario General del Gobierno Provincial de Zamora Chinchipe.",
   "2018: Miembro fundador de la Fundación para la Gestión Ambiental Yaku Ñan.",

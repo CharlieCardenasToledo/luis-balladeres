@@ -42,15 +42,17 @@ export function Footer() {
           <p>
             © {year} Luis Balladares.
           </p>
-          <p>
-            Desarrollado por{" "}
+          <p className="flex items-center gap-1">
+            Desarrollado por
             <a
-              href="https://charliecardenastoledo.com"
+              href="https://nekateklabs.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline-offset-4 hover:underline"
+              className="inline-flex items-center font-medium text-white/80 underline-offset-4 hover:text-white hover:underline"
             >
-              Charlie Cárdenas Toledo
+              {/* eslint-disable-next-line @next/next/no-img-element -- SVG pequeño de marca externa */}
+              <img src="/brand/nekatek-isotipo-blanco.svg" alt="" width={22} height={22} className="h-[22px] w-[22px]" />
+              Nekatek Labs
             </a>
           </p>
         </div>

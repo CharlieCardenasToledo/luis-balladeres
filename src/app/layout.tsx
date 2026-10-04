@@ -81,7 +81,7 @@ const structuredData = {
       alternateName: "Lucho Balladares",
       jobTitle: "Candidato a la Alcaldía del cantón Zamora",
       description:
-        "Abogado y servidor público de Zamora Chinchipe, candidato a la Alcaldía de Zamora 2027–2031 por Fuerza Democrática, listas 2-4-12-21.",
+        "Abogado, doctor en Jurisprudencia y servidor público de Zamora Chinchipe, candidato a la Alcaldía de Zamora 2027–2031 por Fuerza Democrática, listas 2-4-12-21.",
       url: `${siteUrl}/luis`,
       image: `${siteUrl}/media/luis-retrato.png`,
       alumniOf: { "@type": "CollegeOrUniversity", name: "Universidad Nacional de Loja" },
