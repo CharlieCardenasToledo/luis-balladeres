@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { SourceNote, NotFoundList } from "@/components/ui/SourceNote";
+import { PhotoGrid } from "@/components/ui/PhotoGrid";
+import { PHOTOS } from "@/lib/campaign-photos";
 import luisRetrato from "../../../../public/media/luis-retrato.png";
 
 export const metadata: Metadata = {
@@ -44,6 +46,10 @@ export default function Page() {
         de instituciones públicas de Zamora Chinchipe.
       </p>
       <SourceNote status="Verificado — fuente universitaria" sources={FUENTES_FORMACION} />
+
+      <div className="mt-8">
+        <PhotoGrid columns={3} photos={[PHOTOS.recorrido06, PHOTOS.recorrido12, PHOTOS.dialogo30]} />
+      </div>
 
       <p className="mt-6 text-charcoal">
         Su trayectoria pública comenzó en 2006 en Zamora Chinchipe. Ha ejercido como Intendente,

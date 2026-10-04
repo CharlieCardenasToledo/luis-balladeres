@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SourceNote } from "@/components/ui/SourceNote";
 import { TERRITORIES } from "@/lib/territories";
+import { PhotoGrid } from "@/components/ui/PhotoGrid";
+import { CAMPAIGN_PHOTOS_SOURCE, PHOTOS } from "@/lib/campaign-photos";
 
 export const metadata: Metadata = {
   title: "Territorio",
@@ -37,6 +39,31 @@ export default function Page() {
           </Link>
         ))}
       </div>
+
+      <h2 className="mt-12 font-display text-2xl text-black">Recorridos por el cantón</h2>
+      <p className="mt-2 text-charcoal">
+        Encuentros y visitas de la campaña en barrios, comunidades y parroquias de Zamora.
+      </p>
+      <div className="mt-6">
+        <PhotoGrid
+          columns={3}
+          photos={[
+            PHOTOS.recorrido19,
+            PHOTOS.cuzuntza35,
+            PHOTOS.recorrido54,
+            PHOTOS.recorrido88,
+            PHOTOS.recorrido03,
+            PHOTOS.recorrido16,
+            PHOTOS.dialogo28,
+            PHOTOS.recorrido61,
+            PHOTOS.recorrido89,
+            PHOTOS.recorrido10,
+            PHOTOS.recorrido52,
+            PHOTOS.encuentro63,
+          ]}
+        />
+      </div>
+      <SourceNote status="Material de campaña" sources={[CAMPAIGN_PHOTOS_SOURCE]} />
 
       <p className="mt-8 text-sm text-gray-600">
         El contexto de ordenamiento territorial (PDOT) describe roles productivos y de servicios

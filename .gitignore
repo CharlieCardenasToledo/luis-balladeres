@@ -50,3 +50,6 @@ next-env.d.ts
 .rtfm/library.db
 .rtfm/rtfm.log
 .rtfm/touched_files.tmp
+
+# Material descargado de Facebook para revisión (no publicar sin aprobación)
+/media-facebook/

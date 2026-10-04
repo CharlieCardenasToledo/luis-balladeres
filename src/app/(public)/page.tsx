@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Hero } from "@/components/home/Hero";
 import { HomeSection } from "@/components/home/HomeSection";
+import { PhotoGrid } from "@/components/ui/PhotoGrid";
+import { PHOTOS } from "@/lib/campaign-photos";
 
 
 const TRAYECTORIA_PREVIEW = [
@@ -157,6 +159,12 @@ export default function HomePage() {
           Zamora no es una sola realidad. La ciudad y sus parroquias necesitan prioridades distintas,
           pero una misma forma de trabajar: escuchar, ordenar y volver público el avance.
         </p>
+        <div className="mt-8">
+          <PhotoGrid
+            columns={4}
+            photos={[PHOTOS.recorrido23, PHOTOS.recorrido21, PHOTOS.recorrido17, PHOTOS.recorrido51]}
+          />
+        </div>
       </HomeSection>
 
       <HomeSection title="Tres compromisos para empezar" surface="wine" pending={false}>
@@ -186,6 +194,9 @@ export default function HomePage() {
           La campaña se construye conversando con la gente de Zamora. Comparte tus prioridades,
           conoce las propuestas y ayúdanos a llevarlas a cada barrio y parroquia.
         </p>
+        <div className="mt-8">
+          <PhotoGrid columns={3} photos={[PHOTOS.asamblea69, PHOTOS.equipo24, PHOTOS.recorrido53]} />
+        </div>
       </HomeSection>
 
       <HomeSection title="Información para decidir" surface="wine" pending={false} cta={

@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { PhotoGrid } from "@/components/ui/PhotoGrid";
+import { PHOTOS, type CampaignPhoto } from "@/lib/campaign-photos";
 
 export const metadata: Metadata = {
   title: "Noticias",
@@ -10,6 +13,7 @@ type NewsItem = {
   title: string;
   summary: string;
   note?: string;
+  image?: CampaignPhoto;
   sources: { label: string; url?: string }[];
 };
 
@@ -44,8 +48,18 @@ const NEWS: NewsItem[] = [
     title: "La Junta Provincial Electoral califica su candidatura",
     summary:
       "La candidatura de Balladares a la Alcaldía de Zamora fue calificada por la alianza Fuerza Democrática, listas 2-4-12-21, sin objeciones reportadas dentro del proceso.",
+    image: PHOTOS.candidaturaCalificada,
     sources: [{ label: "InfoZamora, 21 de agosto de 2026", url: "https://infozamoraec.com/index.php/2026/08/21/junta-provincial-electoral-califica-candidatura-de-luis-fernando-balladares-para-la-alcaldia-de-zamora/" }],
   },
+];
+
+const ALIANZA_PHOTOS = [
+  PHOTOS.alianza40,
+  PHOTOS.alianza68,
+  PHOTOS.asamblea70,
+  PHOTOS.alianza41,
+  PHOTOS.alianza67,
+  PHOTOS.alianza38,
 ];
 
 export default function Page() {
@@ -63,9 +77,19 @@ export default function Page() {
             <h2 className="mt-1 font-display text-xl text-black">{item.title}</h2>
             <p className="mt-2 text-charcoal">{item.summary}</p>
             {item.note && <p className="mt-2 text-sm text-gray-600">{item.note}</p>}
+            {item.image && (
+              <div className="relative mt-4 aspect-[4/5] w-full max-w-xs overflow-hidden rounded-md bg-gray-100">
+                <Image src={item.image.src} alt={item.image.alt} fill sizes="320px" className="object-cover" />
+              </div>
+            )}
           </li>
         ))}
       </ul>
+
+      <h2 className="mt-14 font-display text-2xl text-black">Alianza Fuerza en campaña</h2>
+      <div className="mt-6">
+        <PhotoGrid columns={3} photos={ALIANZA_PHOTOS} />
+      </div>
     </div>
   );
 }
