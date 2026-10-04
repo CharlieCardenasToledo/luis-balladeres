@@ -33,8 +33,8 @@ test.describe("Navegación pública", () => {
 
   test.describe("enlaces principales", () => {
     for (const [label, path, headingText] of [
-      ["Luis", "/luis", "Luis"],
-      ["Propuestas", "/propuestas", "Propuestas"],
+      ["Luis", "/luis", "Una experiencia al servicio de Zamora"],
+      ["Propuestas", "/propuestas", "Una Zamora que avanza"],
       ["Zamora", "/territorio", "Territorio"],
       ["Noticias", "/noticias", "Noticias"],
       ["Contacto", "/contacto", "Contacto"],

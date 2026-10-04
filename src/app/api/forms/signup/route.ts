@@ -2,14 +2,15 @@ import { NextResponse } from "next/server";
 import { FieldValue } from "firebase-admin/firestore";
 import { getAdminFirestore, verifyAppCheckToken } from "@/lib/firebase/admin";
 import { clientIp, createRateLimiter } from "@/lib/rate-limit";
-import { reportErrorSchema } from "@/lib/validation/report-error";
+import { CONSENT_VERSION } from "@/lib/validation/contact";
+import { signupSchema } from "@/lib/validation/signup";
 
 const isRateLimited = createRateLimiter(10 * 60 * 1000, 5);
 
 export async function POST(request: Request) {
   const appCheck = await verifyAppCheckToken(request);
   if (!appCheck.verified) {
-    console.warn(`App Check (reportar-error) no verificado: ${appCheck.reason}`);
+    console.warn(`App Check (registro) no verificado: ${appCheck.reason}`);
   }
 
   if (isRateLimited(clientIp(request))) {
@@ -26,7 +27,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Cuerpo de solicitud inválido." }, { status: 400 });
   }
 
-  const parsed = reportErrorSchema.safeParse(body);
+  const parsed = signupSchema.safeParse(body);
   if (!parsed.success) {
     return NextResponse.json(
       { error: "Datos inválidos.", issues: parsed.error.issues.map((i) => i.message) },
@@ -34,23 +35,22 @@ export async function POST(request: Request) {
     );
   }
 
-  const { page, description, alternativeSource, email } = parsed.data;
+  const { name, phone } = parsed.data;
 
   try {
-    const db = getAdminFirestore();
-    await db.collection("formSubmissions").add({
-      sourceForm: "reportar-error",
-      page,
-      description,
-      alternativeSource: alternativeSource ?? null,
-      email: email ?? null,
+    await getAdminFirestore().collection("formSubmissions").add({
+      sourceForm: "registro-home",
+      name,
+      phone,
+      consentVersion: CONSENT_VERSION,
+      consentAt: FieldValue.serverTimestamp(),
       createdAt: FieldValue.serverTimestamp(),
       status: "new",
     });
   } catch (error) {
-    console.error("Error al guardar reporte de error:", error);
+    console.error("Error al guardar registro:", error);
     return NextResponse.json(
-      { error: "No se pudo enviar el reporte. Intenta de nuevo más tarde." },
+      { error: "No se pudo completar el registro. Intenta de nuevo más tarde." },
       { status: 500 }
     );
   }

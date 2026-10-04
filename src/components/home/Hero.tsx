@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HeroNav } from "./HeroNav";
+import { HeroSignupForm } from "./HeroSignupForm";
 import { MobileNav } from "../layout/MobileNav";
 import logoLuchoBalladares from "../../../public/brand/logo-lucho-balladares.png";
 import luisPlanomedio from "../../../public/media/luis-planomedio.png";
@@ -80,8 +81,6 @@ export function Hero() {
       <div className="relative z-30 flex items-center justify-between bg-white px-5 py-4 md:hidden">
         <div className="flex items-center gap-3 text-brand-wine" aria-label="Redes sociales">
           <Link href="/redes" aria-label="Facebook" className="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-brand-wine text-2xl font-bold">f</Link>
-          <Link href="/redes" aria-label="Twitter" className="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-brand-wine text-xl font-bold">♥</Link>
-          <Link href="/redes" aria-label="Instagram" className="flex h-11 w-11 items-center justify-center rounded-full border-[3px] border-brand-wine text-xl font-bold">◎</Link>
         </div>
         <MobileNav buttonClassName="border-transparent text-brand-wine" />
       </div>
@@ -100,12 +99,7 @@ export function Hero() {
             <h1 className="text-center font-display text-4xl leading-[0.98] text-white">Yo lucho por Zamora</h1>
             <p className="mt-3 text-center text-lg font-semibold leading-6 text-white">Únete a nuestra campaña</p>
             <p className="text-center text-base font-semibold leading-6 text-white">para recibir información y actualizaciones</p>
-            <div className="mt-6 grid gap-3">
-              <input aria-label="Nombre" placeholder="Nombre*" className="h-16 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
-              <input aria-label="Número de teléfono" placeholder="Número de teléfono*" type="tel" className="h-16 bg-white px-5 text-xl text-charcoal placeholder:text-gray-600" />
-              <Link href="/contacto" className="flex h-16 items-center justify-center bg-brand-wine px-3 text-center text-sm font-bold uppercase tracking-wide text-white">Únete a nosotros</Link>
-            </div>
-            <p className="mt-4 text-sm italic leading-6 text-white/95">Comparte tus prioridades y recibe información de la campaña. Al continuar aceptas nuestra política de privacidad.</p>
+            <HeroSignupForm />
           </div>
         </div>
       </div>

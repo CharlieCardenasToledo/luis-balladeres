@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { TERRITORIES } from "@/lib/territories";
+import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+const siteUrl = getSiteUrl();
 
 /**
  * Sitemap estático con las rutas públicas conocidas (plan, sección 29).

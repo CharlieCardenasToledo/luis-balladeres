@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Archivo_Black } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -24,7 +25,7 @@ const archivoBlack = Archivo_Black({
 const siteName = "Luis Balladares — Alcaldía de Zamora";
 const siteDescription =
   "Luis Fernando Balladares Villavicencio, candidato a la Alcaldía del cantón Zamora por la alianza Fuerza Democrática. Conoce su trayectoria y el proyecto para Zamora.";
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

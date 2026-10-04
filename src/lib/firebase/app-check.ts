@@ -21,8 +21,8 @@ async function getOrInitAppCheck(): Promise<AppCheck | null> {
   if (appCheckInstance) return appCheckInstance;
   if (typeof window === "undefined" || !siteKey) return null;
 
-  // Static exports prerender Client Components on the server. Defer all
-  // Firebase imports until a real browser session has the public config.
+  // Los Client Components también se prerenderizan en el servidor: Firebase
+  // se importa solo dentro del navegador.
   const [{ initializeAppCheck, ReCaptchaEnterpriseProvider }, { firebaseApp }] = await Promise.all([
     import("firebase/app-check"),
     import("./client"),
