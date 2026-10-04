@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { HeroNav } from "./HeroNav";
-import { HeroSignupForm } from "./HeroSignupForm";
+import { WHATSAPP_GROUP_URL } from "@/lib/site";
 import { MobileNav } from "../layout/MobileNav";
 import logoLuchoBalladares from "../../../public/brand/logo-lucho-balladares.png";
 import luisPlanomedio from "../../../public/media/luis-planomedio.png";
@@ -99,7 +99,14 @@ export function Hero() {
             <h1 className="text-center font-display text-4xl leading-[0.98] text-white">Yo lucho por Zamora</h1>
             <p className="mt-3 text-center text-lg font-semibold leading-6 text-white">Únete a nuestra campaña</p>
             <p className="text-center text-base font-semibold leading-6 text-white">para recibir información y actualizaciones</p>
-            <HeroSignupForm />
+            <a
+              href={WHATSAPP_GROUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 flex h-16 items-center justify-center bg-brand-wine px-3 text-center text-sm font-bold uppercase tracking-wide text-white hover:bg-brand-green"
+            >
+              Únete al grupo de WhatsApp
+            </a>
           </div>
         </div>
       </div>

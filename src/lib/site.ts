@@ -1,3 +1,5 @@
+export const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/JrlBjteRSwmC59t2x50Itx";
+
 /**
  * URL pública del sitio. Viene de NEXT_PUBLIC_SITE_URL (apphosting.yaml en
  * producción, .env.local en desarrollo). Sin valor por defecto: un canonical
