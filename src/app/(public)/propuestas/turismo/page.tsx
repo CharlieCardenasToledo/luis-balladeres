@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <ProposalDetail
-      title="Turismo"
+      slug="turismo"
       content="Zamora tiene naturaleza, cultura e identidad para convertirse en destino. Impulsar el turismo significa más oportunidades para emprendedores, comerciantes y parroquias."
       sources={[{ label: "InfoZamora, 28 de abril de 2026", url: "https://infozamoraec.com/index.php/2026/04/28/luis-balladarez-oficializa-su-candidatura-a-la-alcaldia-de-zamora-y-plantea-prioridades-para-el-canton/" }]}
       related={["Plan cantonal de turismo y cartera de productos","Parque Turístico Temático de naturaleza e identidad","Mercados, ferias y espacios de comercialización"]}
